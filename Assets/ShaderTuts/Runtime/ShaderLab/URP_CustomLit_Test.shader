@@ -67,19 +67,19 @@ Shader "Custom/URPLitClone"
 
             half4 frag(Varyings IN) : SV_Target
             {
-                float3 normalTS = UnpackNormal(TEXTURE2D_SAMPLE(_NormalMap, sampler_NormalMap, IN.uv));
+                float3 normalTS = UnpackNormal(SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, IN.uv));
                 float3x3 TBN = float3x3(IN.tangentWS, IN.bitangentWS, IN.normalWS);
                 float3 normalWS = normalize(mul(normalTS, TBN));
                 
                 float3 baseColor = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv) * _BaseColor;
                 
-                InputData inputData;
+                InputData inputData = (InputData)0;
                 inputData.positionWS = IN.positionCS.xyz;
                 inputData.normalWS = normalWS;
                 inputData.viewDirectionWS = normalize(GetCameraPositionWS() - inputData.positionWS);
                 inputData.shadowCoord = TransformWorldToShadowCoord(inputData.positionWS);
                 
-                SurfaceData surfaceData;
+                SurfaceData surfaceData = (SurfaceData)0;
                 surfaceData.albedo = baseColor.rgb;
                 surfaceData.metallic = _Metallic;
                 surfaceData.smoothness = _Smoothness;
