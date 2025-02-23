@@ -23,6 +23,7 @@ Shader "Custom/URPLitClone"
             #pragma fragment frag
             #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
             #pragma multi_compile _ _ADDITIONAL_LIGHTS
+            #pragma multi_compile _ _SHADOWS_SOFT
             
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
@@ -42,6 +43,8 @@ Shader "Custom/URPLitClone"
                 float3 tangentWS : TEXCOORD2;
                 float3 bitangentWS : TEXCOORD3;
                 float4 positionCS : SV_POSITION;
+                float3 positionWS : TEXCOORD4;
+                float4 shadowCoord : TEXCOORD5;
             };
 
             CBUFFER_START(UnityPerMaterial)
@@ -59,9 +62,11 @@ Shader "Custom/URPLitClone"
                 Varyings OUT;
                 OUT.uv = IN.uv;
                 OUT.positionCS = TransformObjectToHClip(IN.positionOS.xyz);
+                OUT.positionWS = TransformObjectToWorld(IN.positionOS.xyz);
                 OUT.normalWS = TransformObjectToWorldNormal(IN.normalOS);
                 OUT.tangentWS = TransformObjectToWorldDir(IN.tangentOS.xyz);
                 OUT.bitangentWS = cross(OUT.normalWS, OUT.tangentWS) * IN.tangentOS.w;
+                OUT.shadowCoord = TransformWorldToShadowCoord(OUT.positionWS);
                 return OUT;
             }
 
@@ -74,10 +79,10 @@ Shader "Custom/URPLitClone"
                 float3 baseColor = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv) * _BaseColor;
                 
                 InputData inputData = (InputData)0;
-                inputData.positionWS = IN.positionCS.xyz;
+                inputData.positionWS = IN.positionWS;
                 inputData.normalWS = normalWS;
                 inputData.viewDirectionWS = normalize(GetCameraPositionWS() - inputData.positionWS);
-                inputData.shadowCoord = TransformWorldToShadowCoord(inputData.positionWS);
+                inputData.shadowCoord = IN.shadowCoord;
                 
                 SurfaceData surfaceData = (SurfaceData)0;
                 surfaceData.albedo = baseColor.rgb;
@@ -86,7 +91,13 @@ Shader "Custom/URPLitClone"
                 surfaceData.emission = _EmissionColor.rgb;
                 surfaceData.alpha = 1.0;
                 
+                // Shadow Calculation
+                Light mainLight = GetMainLight(inputData.shadowCoord);
+                half shadowAttenuation = mainLight.shadowAttenuation;
+                
                 half4 color = UniversalFragmentPBR(inputData, surfaceData);
+                color.rgb *= shadowAttenuation; // Apply shadowing
+                
                 return color;
             }
             ENDHLSL
