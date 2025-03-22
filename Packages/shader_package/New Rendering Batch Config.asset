@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a880167932284ca46b0cabd4431f79a8, type: 3}
+  m_Name: New Rendering Batch Config
+  m_EditorClassIdentifier: 
+  m_DataRaw:
+  - lightmapIndex: -1
+    position: {x: 0, y: 12.75, z: 14.49}
+    angles: {x: 270.01978, y: 180, z: 0}
+    scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    scaleOffset: {x: 0, y: 0, z: 0, w: 0}
+  - lightmapIndex: -1
+    position: {x: 0, y: 12.75, z: 26.1}
+    angles: {x: 270.01978, y: 180, z: 0}
+    scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    scaleOffset: {x: 0, y: 0, z: 0, w: 0}
+  - lightmapIndex: -1
+    position: {x: 9.6, y: 12.75, z: 26.1}
+    angles: {x: 270, y: 134.14, z: 0}
+    scale: {x: 1, y: 1, z: 1.0000001}
+    scaleOffset: {x: 0, y: 0, z: 0, w: 0}
+  - lightmapIndex: -1
+    position: {x: 16.3, y: 12.75, z: 14}
+    angles: {x: 270, y: 134.14, z: 0}
+    scale: {x: 1, y: 1, z: 1.0000001}
+    scaleOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_Mesh: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 859fae5db5446ab4baab4fa85c6ca496, type: 2}

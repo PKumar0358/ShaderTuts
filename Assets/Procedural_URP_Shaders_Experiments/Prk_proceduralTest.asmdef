@@ -1,0 +1,16 @@
+{
+    "name": "Prk_proceduralTest",
+    "rootNamespace": "",
+    "references": [
+        "GUID:772024d5d0f85a94b8aeac06d9e05347"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

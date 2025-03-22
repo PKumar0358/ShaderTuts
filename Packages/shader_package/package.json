@@ -1,0 +1,10 @@
+{
+  "name": "com.prk.procedural.experimental",
+  "description": "procedural shaders, copied from unity's urp lib and modified a bit",
+  "version": "14.0.10",
+  "unity": "2022.3",
+  "displayName": "Procedural_URP_Shaders",
+  "dependencies": {
+    "com.unity.render-pipelines.core": "14.0.10"
+  }
+}
