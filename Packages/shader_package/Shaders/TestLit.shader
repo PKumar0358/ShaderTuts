@@ -166,7 +166,7 @@ Shader "___________TestLit"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/LitForwardPass.hlsl"*/
-            #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLitInput.hlsl"
+           // #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLitInput.hlsl"
             #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLit.hlsl"
             ENDHLSL
         }
