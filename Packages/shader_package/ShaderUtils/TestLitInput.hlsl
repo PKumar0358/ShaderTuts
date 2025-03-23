@@ -1,41 +1,13 @@
-#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
+
+/*#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceInput.hlsl"
-#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DBuffer.hlsl"
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DBuffer.hlsl"*/
 
 #if defined(_DETAIL_MULX2) || defined(_DETAIL_SCALED)
 #define _DETAIL
 #endif
 
-// NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
-CBUFFER_START(UnityPerMaterial)
-float4 _BaseMap_ST;
-float4 _DetailAlbedoMap_ST;
-half4 _BaseColor;
-half4 _SpecColor;
-half4 _EmissionColor;
-half _Cutoff;
-half _Smoothness;
-half _Metallic;
-half _BumpScale;
-half _Parallax;
-half _OcclusionStrength;
-half _ClearCoatMask;
-half _ClearCoatSmoothness;
-half _DetailAlbedoMapScale;
-half _DetailNormalMapScale;
-half _Surface;
-CBUFFER_END
 
-
-TEXTURE2D(_ParallaxMap);        SAMPLER(sampler_ParallaxMap);
-TEXTURE2D(_OcclusionMap);       SAMPLER(sampler_OcclusionMap);
-TEXTURE2D(_DetailMask);         SAMPLER(sampler_DetailMask);
-TEXTURE2D(_DetailAlbedoMap);    SAMPLER(sampler_DetailAlbedoMap);
-TEXTURE2D(_DetailNormalMap);    SAMPLER(sampler_DetailNormalMap);
-TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);
-TEXTURE2D(_SpecGlossMap);       SAMPLER(sampler_SpecGlossMap);
-TEXTURE2D(_ClearCoatMap);       SAMPLER(sampler_ClearCoatMap);
 
 #ifdef _SPECULAR_SETUP
     #define SAMPLE_METALLICSPECULAR(uv) SAMPLE_TEXTURE2D(_SpecGlossMap, sampler_SpecGlossMap, uv)

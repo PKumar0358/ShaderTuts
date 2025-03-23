@@ -14,13 +14,7 @@
 
 
 
-
-///////////////////////////////////////////////////////////////////////////////
-//                  Vertex and Fragment functions                            //
-///////////////////////////////////////////////////////////////////////////////
-
-// Used in Standard (Physically Based) shader
-Varyings TestLitPassVertex(Attributes input)
+Varyings TestLitPassVertex(Attributes input,uint id_:SV_InstanceID)
 {
     Varyings output = (Varyings)0;
     UNITY_SETUP_INSTANCE_ID(input);
@@ -33,20 +27,22 @@ Varyings TestLitPassVertex(Attributes input)
     half fogFactor = 0;
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
     output.normalWS = normalInput.normalWS;
-    
+    float4 tr=_Instance_Data_Buffer[id_].lightmapScaleOffset;
+    output.lightmap_uv=input.staticLightmapUV*tr.xy+tr.zw;
 #if defined(REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR) || defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR)
     real sign = input.tangentOS.w * GetOddNegativeScale();
     half4 tangentWS = half4(normalInput.tangentWS.xyz, sign);
-#endif
+#endif//
+    
 #if defined(REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR)
     output.tangentWS = tangentWS;
-#endif
+#endif//
 
 #if defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR)
     half3 viewDirWS = GetWorldSpaceNormalizeViewDir(vertexInput.positionWS);
     half3 viewDirTS = GetViewDirectionTangentSpace(tangentWS, output.normalWS, viewDirWS);
     output.viewDirTS = viewDirTS;
-#endif
+#endif//
 
     
     OUTPUT_LIGHTMAP_UV(input.staticLightmapUV, unity_LightmapST, output.staticLightmapUV);
@@ -55,11 +51,11 @@ Varyings TestLitPassVertex(Attributes input)
 
 #if defined(REQUIRES_WORLD_SPACE_POS_INTERPOLATOR)
     output.positionWS = vertexInput.positionWS;
-#endif
+#endif//
 
 #if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
     output.shadowCoord = GetShadowCoord(vertexInput);
-#endif
+#endif//
 
     output.positionCS = vertexInput.positionCS;
 

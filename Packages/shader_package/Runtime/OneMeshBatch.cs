@@ -9,6 +9,7 @@ namespace PRK_Procedural
 {
     #if UNITY_EDITOR
     using UnityEditor;
+    using System.IO;
 
     public partial class OneMeshBatch
     {
@@ -24,6 +25,37 @@ namespace PRK_Procedural
             m_BatchConfig?.SaveToConfig(meshes);
             foreach (var x in meshes)
                 x.gameObject.SetActive(false);
+        }
+        void SaveTextureArray(Texture2DArray texArray, string directory)
+        {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            for (int i = 0; i < texArray.depth; i++)
+            {
+                // Create a new Texture2D and copy the slice from the Texture2DArray
+                Texture2D tex = new Texture2D(texArray.width, texArray.height, texArray.format, false);
+                Graphics.CopyTexture(texArray, i, 0, tex, 0, 0);
+
+                // Convert texture to readable format
+                RenderTexture rt = RenderTexture.GetTemporary(tex.width, tex.height, 0, RenderTextureFormat.ARGB32);
+                Graphics.Blit(tex, rt);
+                RenderTexture.active = rt;
+
+                Texture2D readableTex = new Texture2D(tex.width, tex.height, TextureFormat.RGBA32, false);
+                readableTex.ReadPixels(new Rect(0, 0, tex.width, tex.height), 0, 0);
+                readableTex.Apply();
+
+                RenderTexture.active = null;
+                RenderTexture.ReleaseTemporary(rt);
+
+                // Encode and save the texture
+                byte[] bytes = readableTex.EncodeToPNG(); // You can use EncodeToJPG() for JPG format
+                File.WriteAllBytes($"{directory}/Slice_{i}.png", bytes);
+
+                Debug.Log($"Saved: {directory}/Slice_{i}.png");
+                Destroy(readableTex);
+            }
         }
         /*protected override void OnEditorDrawCommandInitialized()
         {
@@ -65,6 +97,7 @@ namespace PRK_Procedural
         [SerializeField] private Texture2D[] dirMaps;
         [SerializeField] private Material mat;
         [System.NonSerialized]private bool m_IsInitialized = false;
+        [SerializeField]private bool dontUse = false;
        
         [SerializeField]
         private RenderingBatchConfig m_BatchConfig;
@@ -72,6 +105,8 @@ namespace PRK_Procedural
         private Batch batch;
         void OnEnable()
         {
+            if(dontUse)
+                return;
             lightMaps = new Texture2D[LightmapSettings.lightmaps.Length];
             dirMaps = new Texture2D[LightmapSettings.lightmaps.Length];
             
@@ -94,6 +129,8 @@ namespace PRK_Procedural
 
         private void OnDestroy()
         {
+            if(dontUse)
+                return;
             batch.Dispose();
             batch = null;
         }
@@ -101,6 +138,8 @@ namespace PRK_Procedural
 
         private void Update()
         {
+            if(dontUse)
+                return;
             batch.Render();
         }
 

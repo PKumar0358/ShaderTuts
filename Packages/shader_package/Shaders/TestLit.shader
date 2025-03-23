@@ -3,8 +3,11 @@ Shader "___________TestLit"
     Properties
     {
         // Specular vs Metallic workflow
+        _lmaptest("lmaptest", Range(0,1)) = 1.0
         _WorkflowMode("WorkflowMode", Float) = 1.0
 
+        _Test1("_Test1", 2D) = "white" {}
+        _Test2("_Test2", 2D) = "white" {}
         [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
         [MainColor] _BaseColor("Color", Color) = (1,1,1,1)
 
@@ -160,14 +163,16 @@ Shader "___________TestLit"
 
             //--------------------------------------
             // GPU Instancing
-            #pragma multi_compile_instancing
-            #pragma instancing_options renderinglayer
+          
             /*#include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DOTS.hlsl"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/LitInput.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/LitForwardPass.hlsl"*/
            // #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLitInput.hlsl"
             #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLit.hlsl"
+            #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLit_Instancing.hlsl"
+            #pragma multi_compile_instancing
+            #pragma instancing_options procedural:Procedural_DataSetup
             ENDHLSL
         }
 
@@ -472,5 +477,5 @@ Shader "___________TestLit"
     }
 
     FallBack "Hidden/Universal Render Pipeline/FallbackError"
-    CustomEditor "UnityEditor.Rendering.Universal.ShaderGUI.LitShader"
+   CustomEditor "UnityEditor.Rendering.Universal.ShaderGUI.LitShader"
 }

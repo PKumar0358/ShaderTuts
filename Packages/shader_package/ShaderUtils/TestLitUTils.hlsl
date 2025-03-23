@@ -1,5 +1,28 @@
 #include "Packages/com.prk.procedural.experimental/ShaderUtils/TestLitInput.hlsl"
 
+float3 Calculate_GI(half4 lightmap_,half4 dirmap_,inout half3 normalWS)
+{
+    half4 decodeInstructions = half4(LIGHTMAP_HDR_MULTIPLIER, LIGHTMAP_HDR_EXPONENT, 0.0h, 0.0h);
+    real4 direction = dirmap_;
+    real4 encodedIlluminance = lightmap_.rgba;
+    real3 illuminance = DecodeLightmap(encodedIlluminance, decodeInstructions);
+    real halfLambert = dot(normalWS, direction.xyz - 0.5) + 0.5;
+    float3 bakedGI_ = illuminance * halfLambert / max(1e-4, direction.w);
+    return bakedGI_;
+}
+#ifdef UNITY_PROCEDURAL_INSTANCING_ENABLED
+void Sample_LMaps(float2 transformed_uv,inout half3 normal_ws,inout float3 bakedgi)
+{
+    /*half4 lightmap_= SAMPLE_TEXTURE2D(_Test1,sampler_Test1,transformed_uv);
+    half4 dirmap_= SAMPLE_TEXTURE2D(_Test2,sampler_Test2,transformed_uv); */
+    int slice=_Instance_Data_Buffer[unity_InstanceID].lightmapIndex;
+    half4 lightmap_= SAMPLE_TEXTURE2D_ARRAY(_LightMaps,sampler_LightMaps,transformed_uv,slice);
+    half4 dirmap_= SAMPLE_TEXTURE2D_ARRAY(_DirMaps,sampler_DirMaps,transformed_uv,slice);
+    bakedgi=Calculate_GI(lightmap_,dirmap_,normal_ws);   
+    //  #endif
+}
+#endif
+
 inline void Initialize_StandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)
 {
     half4 albedoAlpha = SampleAlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
@@ -75,9 +98,18 @@ void Initialize_InputData(Varyings input, half3 normalTS, out InputData inputDat
 
     inputData.fogCoord = InitializeInputDataFog(float4(input.positionWS, 1.0), input.fogFactor);
 
+  //  if (_lmaptest<.5)
+  //  inputData.bakedGI = SAMPLE_GI(input.staticLightmapUV, input.vertexSH, inputData.normalWS);
+  //  else
+    #ifdef UNITY_PROCEDURAL_INSTANCING_ENABLED
+        Sample_LMaps(input.lightmap_uv,inputData.normalWS,inputData.bakedGI);
+    #else
     inputData.bakedGI = SAMPLE_GI(input.staticLightmapUV, input.vertexSH, inputData.normalWS);
+    #endif
+    
+
     inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(input.positionCS);
     inputData.shadowMask = SAMPLE_SHADOWMASK(input.staticLightmapUV);
-
-   
 }
+
+
