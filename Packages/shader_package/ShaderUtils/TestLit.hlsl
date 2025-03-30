@@ -17,18 +17,19 @@
 Varyings TestLitPassVertex(Attributes input,uint id_:SV_InstanceID)
 {
     Varyings output = (Varyings)0;
-    UNITY_SETUP_INSTANCE_ID(input);
-    UNITY_TRANSFER_INSTANCE_ID(input, output);
-    UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
-    VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
-    VertexNormalInputs normalInput = GetVertexNormalInputs(input.normalOS, input.tangentOS);
-    half3 vertexLight = VertexLighting(vertexInput.positionWS, normalInput.normalWS);
+    VertexPositionInputs vertexInput =(VertexPositionInputs)0;
+    VertexNormalInputs normalInput = (VertexNormalInputs)0;
+    VertexPassDataSetup(input,output,vertexInput,normalInput);
 
     half fogFactor = 0;
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
     output.normalWS = normalInput.normalWS;
+    
+    #if defined(_USE_CUSTOM_LIGHTMAPS)&& defined(UNITY_PROCEDURAL_INSTANCING_ENABLED)
     float4 tr=_Instance_Data_Buffer[id_].lightmapScaleOffset;
     output.lightmap_uv=input.staticLightmapUV*tr.xy+tr.zw;
+    #endif//..
+    
 #if defined(REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR) || defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR)
     real sign = input.tangentOS.w * GetOddNegativeScale();
     half4 tangentWS = half4(normalInput.tangentWS.xyz, sign);
@@ -38,12 +39,11 @@ Varyings TestLitPassVertex(Attributes input,uint id_:SV_InstanceID)
     output.tangentWS = tangentWS;
 #endif//
 
-#if defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR)
-    half3 viewDirWS = GetWorldSpaceNormalizeViewDir(vertexInput.positionWS);
-    half3 viewDirTS = GetViewDirectionTangentSpace(tangentWS, output.normalWS, viewDirWS);
-    output.viewDirTS = viewDirTS;
-#endif//
-
+    #if defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR)
+        half3 viewDirWS = GetWorldSpaceNormalizeViewDir(vertexInput.positionWS);
+        half3 viewDirTS = GetViewDirectionTangentSpace(tangentWS, output.normalWS, viewDirWS);
+        output.viewDirTS = viewDirTS;
+    #endif//
     
     OUTPUT_LIGHTMAP_UV(input.staticLightmapUV, unity_LightmapST, output.staticLightmapUV);
     OUTPUT_SH(output.normalWS.xyz, output.vertexSH);
@@ -52,13 +52,7 @@ Varyings TestLitPassVertex(Attributes input,uint id_:SV_InstanceID)
 #if defined(REQUIRES_WORLD_SPACE_POS_INTERPOLATOR)
     output.positionWS = vertexInput.positionWS;
 #endif//
-
-#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
-    output.shadowCoord = GetShadowCoord(vertexInput);
-#endif//
-
     output.positionCS = vertexInput.positionCS;
-
     return output;
 }
 
@@ -66,6 +60,9 @@ half4 TestLitPassFragment(Varyings input):SV_Target
 {
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
+    #if defined(_USE_CUSTOM_LIGHTMAPS_ARRAY)
+    return half4(1,0,0,1);
+    #endif
     SurfaceData surfaceData;
     Initialize_StandardLitSurfaceData(input.uv, surfaceData);
     InputData inputData;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028422, g: 0.22571655, b: 0.3069231, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028435, g: 0.22571556, b: 0.30692303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -372,14 +372,13 @@ GameObject:
   - component: {fileID: 289927542}
   - component: {fileID: 289927545}
   - component: {fileID: 289927544}
-  - component: {fileID: 289927543}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &289927542
 Transform:
   m_ObjectHideFlags: 0
@@ -389,34 +388,12 @@ Transform:
   m_GameObject: {fileID: 289927541}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -38.1, y: 1.2184725, z: 18.400002}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 577313019}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &289927543
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289927541}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &289927544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -722,38 +699,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &404979295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 404979296}
-  m_Layer: 0
-  m_Name: Wood Canopy (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &404979296
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404979295}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.59212, y: 11.9, z: 59.356464}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 706886778}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408629235
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +935,172 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &499523158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499523159}
+  - component: {fileID: 499523161}
+  - component: {fileID: 499523160}
+  m_Layer: 0
+  m_Name: wood_canopy_legs (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &499523159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499523158}
+  serializedVersion: 2
+  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+  m_LocalPosition: {x: 49.59212, y: 11.9, z: -6.443535}
+  m_LocalScale: {x: 11.0105, y: 11.010495, z: 11.010495}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &499523160
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499523158}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4695bd902927e834c800f82e4cd6dbca, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &499523161
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499523158}
+  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
+--- !u!1 &503427146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503427147}
+  - component: {fileID: 503427149}
+  - component: {fileID: 503427148}
+  m_Layer: 0
+  m_Name: wood_canopy_roof (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &503427147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503427146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+  m_LocalPosition: {x: 117.6, y: 11.9, z: -73.1}
+  m_LocalScale: {x: 11.0105, y: 11.010497, z: 11.010497}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &503427148
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503427146}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 615e2ddddd079bc49b852f82385b8d74, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &503427149
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503427146}
+  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!1 &526073913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,14 +1112,13 @@ GameObject:
   - component: {fileID: 526073914}
   - component: {fileID: 526073917}
   - component: {fileID: 526073916}
-  - component: {fileID: 526073915}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &526073914
 Transform:
   m_ObjectHideFlags: 0
@@ -1018,34 +1128,12 @@ Transform:
   m_GameObject: {fileID: 526073913}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 55.1, y: 1.2184725, z: -60}
+  m_LocalScale: {x: 11.0105, y: 11.010497, z: 11.010497}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 606168672}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &526073915
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526073913}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &526073916
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1096,70 +1184,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526073913}
   m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &526472443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 526472444}
-  m_Layer: 0
-  m_Name: Wood Canopy (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &526472444
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526472443}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.70788, y: 11.9, z: -48.14353}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1416512085}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &577313018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 577313019}
-  m_Layer: 0
-  m_Name: Wood Canopy (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &577313019
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577313018}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.607876, y: 11.9, z: 71.95647}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 289927542}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588740773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1302,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &606168671
+--- !u!1 &635872251
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1286,30 +1310,77 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 606168672}
+  - component: {fileID: 635872253}
+  - component: {fileID: 635872252}
+  - component: {fileID: 635872254}
   m_Layer: 0
-  m_Name: Wood Canopy (4)
+  m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &606168672
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &635872252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635872251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b31521383a5abd4e992f77730449fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keywordOn: 0
+  On: 0
+  lightMaps: []
+  dirMaps: []
+  mat: {fileID: 2100000, guid: 08921f4b0fb3e0246865f95bc3f85255, type: 2}
+  dontUse: 0
+  m_BatchConfig: {fileID: 0}
+--- !u!4 &635872253
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606168671}
+  m_GameObject: {fileID: 635872251}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.59212, y: 11.9, z: -6.443535}
-  m_LocalScale: {x: 11.0105, y: 11.0105, z: 11.0105}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -5.507879, y: 10.681527, z: 53.556465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 994491084}
+  - {fileID: 706886778}
+  - {fileID: 289927542}
+  - {fileID: 1223654994}
+  - {fileID: 1416512085}
+  - {fileID: 1996982395}
+  - {fileID: 1683669785}
+  - {fileID: 659560694}
+  - {fileID: 1915157132}
+  - {fileID: 1826298262}
+  - {fileID: 941472295}
   - {fileID: 526073914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635872254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635872251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f5e49677fda6a4a861427273808da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filters:
+  - {fileID: 503427149}
+  - {fileID: 499523161}
 --- !u!1 &659560693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,14 +1392,13 @@ GameObject:
   - component: {fileID: 659560694}
   - component: {fileID: 659560697}
   - component: {fileID: 659560696}
-  - component: {fileID: 659560695}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &659560694
 Transform:
   m_ObjectHideFlags: 0
@@ -1338,34 +1408,12 @@ Transform:
   m_GameObject: {fileID: 659560693}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 14.6, y: 1.2184725, z: 85.6}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1997186012}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &659560695
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659560693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &659560696
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1427,7 +1475,6 @@ GameObject:
   - component: {fileID: 661861635}
   - component: {fileID: 661861638}
   - component: {fileID: 661861637}
-  - component: {fileID: 661861636}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -1450,28 +1497,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &661861636
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661861634}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &661861637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1533,14 +1558,13 @@ GameObject:
   - component: {fileID: 706886778}
   - component: {fileID: 706886781}
   - component: {fileID: 706886780}
-  - component: {fileID: 706886779}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &706886778
 Transform:
   m_ObjectHideFlags: 0
@@ -1550,34 +1574,12 @@ Transform:
   m_GameObject: {fileID: 706886777}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 55.1, y: 1.2184725, z: 5.799999}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 404979296}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &706886779
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706886777}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &706886780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1639,14 +1641,13 @@ GameObject:
   - component: {fileID: 941472295}
   - component: {fileID: 941472298}
   - component: {fileID: 941472297}
-  - component: {fileID: 941472296}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &941472295
 Transform:
   m_ObjectHideFlags: 0
@@ -1656,34 +1657,12 @@ Transform:
   m_GameObject: {fileID: 941472294}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 20.1, y: 1.2184725, z: -108.3}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2097311637}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &941472296
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941472294}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &941472297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1734,98 +1713,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941472294}
   m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &969036450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 969036451}
-  m_Layer: 0
-  m_Name: Wood Canopy (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &969036451
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969036450}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.492123, y: 11.9, z: -56.64353}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1826298262}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &991957962
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994308766}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!64 &991968286
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994304140}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &994282882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 994492076}
-  m_Layer: 0
-  m_Name: Wood Canopy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
 --- !u!1 &994304140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,7 +1724,6 @@ GameObject:
   - component: {fileID: 994500440}
   - component: {fileID: 997373640}
   - component: {fileID: 996332850}
-  - component: {fileID: 991968286}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -1856,14 +1742,13 @@ GameObject:
   - component: {fileID: 994491084}
   - component: {fileID: 997393904}
   - component: {fileID: 996503412}
-  - component: {fileID: 991957962}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &994491084
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,27 +1758,11 @@ Transform:
   m_GameObject: {fileID: 994308766}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.9, y: 1.2184725, z: -5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 994492076}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &994492076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994282882}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.39212132, y: 11.9, z: 48.556465}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 994491084}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &994500440
 Transform:
@@ -2139,7 +2008,6 @@ GameObject:
   - component: {fileID: 1017408161}
   - component: {fileID: 1017408164}
   - component: {fileID: 1017408163}
-  - component: {fileID: 1017408162}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -2162,28 +2030,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1017408162
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017408160}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1017408163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2234,6 +2080,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017408160}
   m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
+--- !u!1 &1060251863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060251867}
+  - component: {fileID: 1060251866}
+  - component: {fileID: 1060251865}
+  - component: {fileID: 1060251864}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1060251864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060251863}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1060251865
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060251863}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1060251866
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060251863}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1060251867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060251863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.360172, y: 40.885044, z: 20.355732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070825964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,7 +2196,6 @@ GameObject:
   - component: {fileID: 1070825965}
   - component: {fileID: 1070825968}
   - component: {fileID: 1070825967}
-  - component: {fileID: 1070825966}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -2268,28 +2218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1070825966
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070825964}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1070825967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2340,38 +2268,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070825964}
   m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &1139472598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1139472599}
-  m_Layer: 0
-  m_Name: Wood Canopy (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1139472599
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139472598}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -102.10788, y: 11.9, z: 131.65646}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1683669785}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151492315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,38 +2386,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1165477761
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1165477762}
-  m_Layer: 0
-  m_Name: Wood Canopy (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1165477762
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165477761}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.307884, y: 11.9, z: -18.343536}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1996982395}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168295190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,38 +2492,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1183142635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1183142636}
-  m_Layer: 0
-  m_Name: Wood Canopy (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1183142636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183142635}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.192116, y: 11.9, z: -51.443535}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1915157132}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1223654993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,14 +2503,13 @@ GameObject:
   - component: {fileID: 1223654994}
   - component: {fileID: 1223654997}
   - component: {fileID: 1223654996}
-  - component: {fileID: 1223654995}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1223654994
 Transform:
   m_ObjectHideFlags: 0
@@ -2688,34 +2519,12 @@ Transform:
   m_GameObject: {fileID: 1223654993}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -46.7, y: 1.2184725, z: -35.6}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1857415675}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1223654995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223654993}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1223654996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2777,7 +2586,6 @@ GameObject:
   - component: {fileID: 1372564402}
   - component: {fileID: 1372564405}
   - component: {fileID: 1372564404}
-  - component: {fileID: 1372564403}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -2800,28 +2608,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1372564403
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372564401}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1372564404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2883,7 +2669,6 @@ GameObject:
   - component: {fileID: 1379855862}
   - component: {fileID: 1379855865}
   - component: {fileID: 1379855864}
-  - component: {fileID: 1379855863}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -2906,28 +2691,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1379855863
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379855861}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1379855864
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2989,14 +2752,13 @@ GameObject:
   - component: {fileID: 1416512085}
   - component: {fileID: 1416512088}
   - component: {fileID: 1416512087}
-  - component: {fileID: 1416512086}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1416512085
 Transform:
   m_ObjectHideFlags: 0
@@ -3006,34 +2768,12 @@ Transform:
   m_GameObject: {fileID: 1416512084}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -52.2, y: 1.2184725, z: -101.7}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 526472444}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1416512086
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416512084}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1416512087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3095,7 +2835,6 @@ GameObject:
   - component: {fileID: 1466501674}
   - component: {fileID: 1466501677}
   - component: {fileID: 1466501676}
-  - component: {fileID: 1466501675}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -3118,28 +2857,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1466501675
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466501673}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1466501676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3201,7 +2918,6 @@ GameObject:
   - component: {fileID: 1473443010}
   - component: {fileID: 1473443013}
   - component: {fileID: 1473443012}
-  - component: {fileID: 1473443011}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -3224,28 +2940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1473443011
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473443009}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1473443012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3307,7 +3001,6 @@ GameObject:
   - component: {fileID: 1633455884}
   - component: {fileID: 1633455887}
   - component: {fileID: 1633455886}
-  - component: {fileID: 1633455885}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -3330,28 +3023,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1633455885
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633455883}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1633455886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3413,14 +3084,13 @@ GameObject:
   - component: {fileID: 1683669785}
   - component: {fileID: 1683669788}
   - component: {fileID: 1683669787}
-  - component: {fileID: 1683669786}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1683669785
 Transform:
   m_ObjectHideFlags: 0
@@ -3430,34 +3100,12 @@ Transform:
   m_GameObject: {fileID: 1683669784}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -96.6, y: 1.2184725, z: 78.1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1139472599}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1683669786
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683669784}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1683669787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3519,7 +3167,6 @@ GameObject:
   - component: {fileID: 1691472730}
   - component: {fileID: 1691472733}
   - component: {fileID: 1691472732}
-  - component: {fileID: 1691472731}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -3542,28 +3189,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1691472731
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691472729}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1691472732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3743,14 +3368,13 @@ GameObject:
   - component: {fileID: 1826298262}
   - component: {fileID: 1826298265}
   - component: {fileID: 1826298264}
-  - component: {fileID: 1826298263}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1826298262
 Transform:
   m_ObjectHideFlags: 0
@@ -3760,34 +3384,12 @@ Transform:
   m_GameObject: {fileID: 1826298261}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 69, y: 1.2184725, z: -110.2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969036451}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1826298263
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826298261}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1826298264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3838,38 +3440,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826298261}
   m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &1857415674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1857415675}
-  m_Layer: 0
-  m_Name: Wood Canopy (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1857415675
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857415674}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.20788, y: 11.9, z: 17.956467}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1223654994}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907541866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,7 +3456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1907541867
 Transform:
   m_ObjectHideFlags: 0
@@ -3956,14 +3526,13 @@ GameObject:
   - component: {fileID: 1915157132}
   - component: {fileID: 1915157135}
   - component: {fileID: 1915157134}
-  - component: {fileID: 1915157133}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1915157132
 Transform:
   m_ObjectHideFlags: 0
@@ -3973,34 +3542,12 @@ Transform:
   m_GameObject: {fileID: 1915157131}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 110.7, y: 1.2184725, z: -105}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1183142636}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1915157133
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915157131}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1915157134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4062,14 +3609,13 @@ GameObject:
   - component: {fileID: 1996982395}
   - component: {fileID: 1996982398}
   - component: {fileID: 1996982397}
-  - component: {fileID: 1996982396}
   m_Layer: 0
   m_Name: wood_canopy_legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1996982395
 Transform:
   m_ObjectHideFlags: 0
@@ -4079,34 +3625,12 @@ Transform:
   m_GameObject: {fileID: 1996982394}
   serializedVersion: 2
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -92.8, y: 1.2184725, z: -71.9}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1165477762}
+  m_Father: {fileID: 635872253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1996982396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996982394}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &1996982397
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4157,38 +3681,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996982394}
   m_Mesh: {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
---- !u!1 &1997186011
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1997186012}
-  m_Layer: 0
-  m_Name: Wood Canopy (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1997186012
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997186011}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.092121, y: 11.9, z: 139.15646}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 659560694}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070326875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,7 +3692,6 @@ GameObject:
   - component: {fileID: 2070326876}
   - component: {fileID: 2070326879}
   - component: {fileID: 2070326878}
-  - component: {fileID: 2070326877}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -4223,28 +3714,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2070326877
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070326875}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &2070326878
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4306,7 +3775,6 @@ GameObject:
   - component: {fileID: 2071832093}
   - component: {fileID: 2071832096}
   - component: {fileID: 2071832095}
-  - component: {fileID: 2071832094}
   m_Layer: 0
   m_Name: wood_canopy_roof
   m_TagString: Untagged
@@ -4329,28 +3797,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1907541867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2071832094
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071832092}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
 --- !u!23 &2071832095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4519,38 +3965,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &2097311636
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2097311637}
-  m_Layer: 0
-  m_Name: Wood Canopy (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &2097311637
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097311636}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.592121, y: 11.9, z: -54.743538}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 941472295}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133048174
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,14 +4135,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23255825, g: 1, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4766,7 +4180,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 3127
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -4780,13 +4194,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140332712}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3805232, y: -0.39431095, z: 0.18387018, w: 0.81603485}
+  m_LocalRotation: {x: 0.37838003, y: 0.4036846, z: -0.1882412, w: 0.8114386}
   m_LocalPosition: {x: 2.1125083, y: 117.2, z: 0.23672593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -51.58, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 52.9, z: 0}
 --- !u!1 &2140626484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,15 +4327,7 @@ SceneRoots:
   - {fileID: 2140332715}
   - {fileID: 1168295194}
   - {fileID: 1907541867}
-  - {fileID: 994492076}
-  - {fileID: 577313019}
-  - {fileID: 1857415675}
-  - {fileID: 526472444}
-  - {fileID: 1165477762}
-  - {fileID: 1139472599}
-  - {fileID: 1997186012}
-  - {fileID: 1183142636}
-  - {fileID: 969036451}
-  - {fileID: 2097311637}
-  - {fileID: 606168672}
-  - {fileID: 404979296}
+  - {fileID: 635872253}
+  - {fileID: 503427147}
+  - {fileID: 499523159}
+  - {fileID: 1060251867}

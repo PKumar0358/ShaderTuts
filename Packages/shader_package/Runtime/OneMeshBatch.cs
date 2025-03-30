@@ -107,17 +107,27 @@ namespace PRK_Procedural
         {
             if(dontUse)
                 return;
-            lightMaps = new Texture2D[LightmapSettings.lightmaps.Length];
-            dirMaps = new Texture2D[LightmapSettings.lightmaps.Length];
-            
-            for (int i = 0; i < LightmapSettings.lightmaps.Length; i++)
+            if (LightmapSettings.lightmaps!=null&&LightmapSettings.lightmaps.Length>0)
             {
-                lightMaps[i] = LightmapSettings.lightmaps[i].lightmapColor;
-                dirMaps[i] = LightmapSettings.lightmaps[i].lightmapDir;
+               if(!Shader.IsKeywordEnabled("_USE_CUSTOM_LIGHTMAPS"))
+               {
+                   lightMaps = new Texture2D[LightmapSettings.lightmaps.Length];
+                   dirMaps = new Texture2D[LightmapSettings.lightmaps.Length];
+            
+                   for (int i = 0; i < LightmapSettings.lightmaps.Length; i++)
+                   {
+                       lightMaps[i] = LightmapSettings.lightmaps[i].lightmapColor;
+                       dirMaps[i] = LightmapSettings.lightmaps[i].lightmapDir;
+                   }
+                    SetTextureArray(lightMaps, mat,"_LightMaps");
+                    SetTextureArray(dirMaps, mat,"_DirMaps");
+                    Shader.EnableKeyword("_USE_CUSTOM_LIGHTMAPS");
+               }
             }
-            mat.EnableKeyword("_USE_CUSTOM_LIGHTMAPS");
-            SetTextureArray(lightMaps, mat,"_LightMaps");
-            SetTextureArray(dirMaps, mat,"_DirMaps");
+            else
+            {
+                 Shader.DisableKeyword("_USE_CUSTOM_LIGHTMAPS");
+            }
             
             var o=transform.GetComponentsInChildren<Renderer>(true);
             batch = new Batch(o, ref mat);
@@ -133,6 +143,8 @@ namespace PRK_Procedural
                 return;
             batch.Dispose();
             batch = null;
+            if(Shader.IsKeywordEnabled("_USE_CUSTOM_LIGHTMAPS"))
+            Shader.DisableKeyword("_USE_CUSTOM_LIGHTMAPS");
         }
 
 
@@ -161,7 +173,8 @@ namespace PRK_Procedural
                     Graphics.CopyTexture(inTex, 0, mip, 0, 0, copyWidth, copyHeight, outArray, i, mip, 0, 0);
                 }
             }
-            targetMaterial_.SetTexture(arrayName_,outArray);
+           // targetMaterial_.SetTexture(arrayName_,outArray);
+            Shader.SetGlobalTexture(arrayName_,outArray);
         }
         
     }
