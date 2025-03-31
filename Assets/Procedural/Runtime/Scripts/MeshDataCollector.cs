@@ -22,7 +22,6 @@ namespace PRK.Procedural
             Dictionary<int,int>batchID_matID=new Dictionary<int,int>();
             Dictionary<Mesh,int>mesh_batch_ = new Dictionary<Mesh, int>();
             List<InstanceData>instanceDataList=new List<InstanceData>();
-            List<ProcedrualRenderBatch>tempBatches=new List<ProcedrualRenderBatch>();
             Dictionary<Material, int> matss = new Dictionary<Material, int>();
             var objs=transform.GetComponentsInChildren<MeshRenderer>();
             TransformData[]trs=new TransformData[objs.Length];
@@ -81,13 +80,8 @@ namespace PRK.Procedural
             }
         }
         
+      
         [System.Serializable]
-        public class ProcedrualRenderBatch
-        {
-            public Vector4 scaleOffset_Main;
-            public Vector4 scaleOffset_Detail;
-        }
-        
         public struct InstanceData
         {
             public int Batch_ID;
