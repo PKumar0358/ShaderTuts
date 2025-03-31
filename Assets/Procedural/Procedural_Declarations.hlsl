@@ -79,9 +79,7 @@ struct Varyings
     UNITY_VERTEX_OUTPUT_STEREO
 };
 
-static int batch_ID;
-static int transform_ID;
-static int lightmap_ID;
+
 
 
 

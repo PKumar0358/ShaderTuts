@@ -1,9 +1,9 @@
 
 void Set_Data(uint Instance_ID_)
 {
-    batch_ID=_InstanceDataArray[Instance_ID_].Batch_Index;
-    transform_ID=_InstanceDataArray[Instance_ID_].Transform_Index;
-    lightmap_ID=_InstanceDataArray[Instance_ID_].Lightmap_Index;
+   // batch_ID=_InstanceDataArray[Instance_ID_].Batch_Index;
+   // transform_ID=_InstanceDataArray[Instance_ID_].Transform_Index;
+   // lightmap_ID=_InstanceDataArray[Instance_ID_].Lightmap_Index;
 }
 
 FragmentData GetFragmentData(inout Varyings input)
@@ -18,10 +18,6 @@ FragmentData GetFragmentData(inout Varyings input)
     data._Smoothness=_Smoothness;
     data._Metallic=_Metallic;
     data._BumpScale=_BumpScale;
-//    data._Parallax=_Parallax;
- //   data._OcclusionStrength=_OcclusionStrength;
- //   data._ClearCoatMask=_ClearCoatMask;
-  //  data._ClearCoatSmoothness=_ClearCoatSmoothness;
     data._DetailAlbedoMapScale=_DetailAlbedoMapScale;
     data._DetailNormalMapScale=_DetailNormalMapScale;
     data._Surface=_Surface;
