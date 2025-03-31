@@ -2,12 +2,18 @@
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceInput.hlsl"
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
-#if (defined(_NORMALMAP) || (defined(_PARALLAXMAP) && !defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR))) || defined(_DETAIL)
-#define REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR
-#endif
+
+
 #if defined(_DETAIL_MULX2) || defined(_DETAIL_SCALED)
 #define _DETAIL
 #endif
+
+
+#if (defined(_NORMALMAP) || (defined(_PARALLAXMAP) && !defined(REQUIRES_TANGENT_SPACE_VIEW_DIR_INTERPOLATOR))) || defined(_DETAIL)
+#define REQUIRES_WORLD_SPACE_TANGENT_INTERPOLATOR
+#endif
+
+
 
 struct InstanceData
 {
@@ -27,6 +33,9 @@ struct TransformData
     float4x4 _ObjToWorld;
     float4x4 _WorldToObj;
 };
+
+
+
 StructuredBuffer<InstanceData> _InstanceDataArray;
 StructuredBuffer<TransformData>_TransformDataArray;
 StructuredBuffer<float4>_LightmapScaleOffet;
@@ -74,26 +83,28 @@ static int batch_ID;
 static int transform_ID;
 static int lightmap_ID;
 
-static float4 prk_scaleOffset_Main;
-static float4 prk_DetailAlbedoMap_ST;
-static half4 prk_BaseColor;
-static half4 prk_SpecColor;
-static half4 prk_EmissionColor;
-static half prk_Cutoff;
-static half prk_Smoothness;
-static half prk_Metallic;
-static half prk_BumpScale;
-static half prk_Parallax;
-static half prk_OcclusionStrength;
-static half prk_ClearCoatMask;
-static half prk_ClearCoatSmoothness;
-static half prk_DetailAlbedoMapScale;
-static half prk_DetailNormalMapScale;
-static half prk_Surface;
 
-CBUFFER_START(PerDrawData)  
-float4 colortest;
-CBUFFER_END
+
+
+struct FragmentData
+{
+    float4 _BaseMap_ST;
+    float4 _DetailAlbedoMap_ST;
+    half4 _BaseColor;
+    half4 _SpecColor;
+    half4 _EmissionColor;
+    half _Cutoff;
+    half _Smoothness;
+    half _Metallic;
+    half _BumpScale;
+  //  half _Parallax;
+ //   half _OcclusionStrength;
+   // half _ClearCoatMask;
+   // half _ClearCoatSmoothness;
+    half _DetailAlbedoMapScale;
+    half _DetailNormalMapScale;
+    half _Surface;
+};
 
 CBUFFER_START(UnityPerMaterial)
 float4 _BaseMap_ST;
@@ -105,20 +116,21 @@ half _Cutoff;
 half _Smoothness;
 half _Metallic;
 half _BumpScale;
-half _Parallax;
-half _OcclusionStrength;
-half _ClearCoatMask;
-half _ClearCoatSmoothness;
+//half _Parallax;
+//half _OcclusionStrength;
+//half _ClearCoatMask;
+//half _ClearCoatSmoothness;
 half _DetailAlbedoMapScale;
 half _DetailNormalMapScale;
 half _Surface;
 CBUFFER_END
 
+TEXTURE2D_ARRAY(_BaseTexArray);             SAMPLER(sampler_BaseTexArray);
 TEXTURE2D_ARRAY(_BaseMapArray);             SAMPLER(sampler_BaseMapArray);
 TEXTURE2D_ARRAY(_DetailAlbedoMapArray);     SAMPLER(sampler_DetailAlbedoMapArray);
 TEXTURE2D_ARRAY(_DetailNormalMapArray);     SAMPLER(sampler_DetailNormalMapArray);
 
-TEXTURE2D(_DetailMask);         SAMPLER(sampler_DetailMask);
+//TEXTURE2D(_DetailMask);         SAMPLER(sampler_DetailMask);
 TEXTURE2D(_DetailAlbedoMap);    SAMPLER(sampler_DetailAlbedoMap);
 TEXTURE2D(_DetailNormalMap);    SAMPLER(sampler_DetailNormalMap);
 TEXTURE2D(_MetallicGlossMap);   SAMPLER(sampler_MetallicGlossMap);

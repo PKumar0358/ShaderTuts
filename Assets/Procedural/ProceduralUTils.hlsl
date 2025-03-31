@@ -1,28 +1,33 @@
+
 void Set_Data(uint Instance_ID_)
 {
     batch_ID=_InstanceDataArray[Instance_ID_].Batch_Index;
     transform_ID=_InstanceDataArray[Instance_ID_].Transform_Index;
     lightmap_ID=_InstanceDataArray[Instance_ID_].Lightmap_Index;
 }
-void Set_UnityPerMaterialBufferData()
+
+FragmentData GetFragmentData(inout Varyings input)
 {
-    prk_scaleOffset_Main=_BaseMap_ST;
-    prk_DetailAlbedoMap_ST=_DetailAlbedoMap_ST;
-    prk_BaseColor=_BaseColor;
-    prk_SpecColor=_SpecColor;
-    prk_EmissionColor=_EmissionColor;
-    prk_Cutoff=_Cutoff;
-    prk_Smoothness=_Smoothness;
-    prk_Metallic=_Metallic;
-    prk_BumpScale=_BumpScale;
-    prk_Parallax=_Parallax;
-    prk_OcclusionStrength=_OcclusionStrength;
-    prk_ClearCoatMask=_ClearCoatMask;
-    prk_ClearCoatSmoothness=_ClearCoatSmoothness;
-    prk_DetailAlbedoMapScale=_DetailAlbedoMapScale;
-    prk_DetailNormalMapScale=_DetailNormalMapScale;
-    prk_Surface=_Surface;
+    FragmentData data;
+    data._BaseMap_ST=_BaseMap_ST;
+    data._DetailAlbedoMap_ST=_DetailAlbedoMap_ST;
+    data._BaseColor=_BaseColor;
+    data._SpecColor=_SpecColor;
+    data._EmissionColor=_EmissionColor;
+    data._Cutoff=_Cutoff;
+    data._Smoothness=_Smoothness;
+    data._Metallic=_Metallic;
+    data._BumpScale=_BumpScale;
+//    data._Parallax=_Parallax;
+ //   data._OcclusionStrength=_OcclusionStrength;
+ //   data._ClearCoatMask=_ClearCoatMask;
+  //  data._ClearCoatSmoothness=_ClearCoatSmoothness;
+    data._DetailAlbedoMapScale=_DetailAlbedoMapScale;
+    data._DetailNormalMapScale=_DetailNormalMapScale;
+    data._Surface=_Surface;
+   return data;
 }
+
 void MainUV(float2 uv,inout float2 mainuv)
 {
     mainuv=uv*_BaseMap_ST.xy+_BaseMap_ST.zw;
@@ -131,8 +136,6 @@ void Initialize_InputData(Varyings input, half3 normalTS, out InputData inputDat
 
 
     inputData.shadowCoord = float4(0, 0, 0, 0);
-
-
     inputData.fogCoord = InitializeInputDataFog(float4(input.positionWS, 1.0), input.fogFactor);
     inputData.bakedGI = SAMPLE_GI(input.staticLightmapUV, input.vertexSH, inputData.normalWS);
     inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(input.positionCS);

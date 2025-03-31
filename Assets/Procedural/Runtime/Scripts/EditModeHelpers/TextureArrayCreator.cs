@@ -129,10 +129,8 @@ namespace PRK.Procedural
 
                 x += sourceArray_[i].width + padding_; // Move right with 1-pixel padding
             }
-
             atlas.Apply();
         }
-
        
     }
 #endif

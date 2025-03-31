@@ -9,8 +9,7 @@ Varyings Procedural_Vertex(Attributes input,uint id_:SV_InstanceID)
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_TRANSFER_INSTANCE_ID(input, output);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
-   Set_UnityPerMaterialBufferData();
-   colortest=half4(1,0,0,0);
+  // Set_UnityPerMaterialBufferData();
     
     VertexPositionInputs vertexInput = Get_VertexPositionInputs(input.positionOS.xyz);
     VertexNormalInputs normalInput = Get_VertexNormalInputs(input.normalOS, input.tangentOS);
@@ -51,9 +50,9 @@ half4 Procedural_Fragment(Varyings input):SV_Target0
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);   
     
-    
+    FragmentData fragdata=GetFragmentData(input);
     SurfaceData surfaceData;
-    Initialize_StandardLitSurfaceData(input.uv, surfaceData);
+    Initialize_StandardLitSurfaceData(input.uv, surfaceData,fragdata);
 
     InputData inputData;
     Initialize_InputData(input, surfaceData.normalTS, inputData);

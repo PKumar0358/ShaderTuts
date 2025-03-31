@@ -1,3 +1,4 @@
+
 half3 Alpha_Modulate(half3 albedo, half alpha)
 {  
     #if defined(_ALPHAMODULATE_ON)
@@ -32,28 +33,28 @@ half3 Sample_Normal(float2 uv, TEXTURE2D_PARAM(bumpMap, sampler_bumpMap), half s
     #endif
 }
 
-half4 Sample_MetallicSpecGloss(float2 uv, half albedoAlpha)
+half4 Sample_MetallicSpecGloss(float2 uv, half albedoAlpha,inout FragmentData fragData_)
 {
     half4 specGloss;
 
 #ifdef _METALLICSPECGLOSSMAP
     specGloss = half4(SAMPLE_METALLICSPECULAR(uv));
     #ifdef _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-        specGloss.a = albedoAlpha * _Smoothness;
+        specGloss.a = albedoAlpha * fragData_._Smoothness;
     #else
-        specGloss.a *= _Smoothness;
+        specGloss.a *= fragData_._Smoothness;
     #endif
 #else // _METALLICSPECGLOSSMAP
     #if _SPECULAR_SETUP
-        specGloss.rgb = _SpecColor.rgb;
+        specGloss.rgb = fragData_._SpecColor.rgb;
     #else
-        specGloss.rgb = _Metallic.rrr;
+        specGloss.rgb = fragData_._Metallic.rrr;
     #endif
 
     #ifdef _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-        specGloss.a = albedoAlpha * prk_Smoothness;
+        specGloss.a = albedoAlpha * fragData_._Smoothness;
     #else
-        specGloss.a = _Smoothness;
+        specGloss.a = fragData_._Smoothness;
     #endif
 #endif
 
@@ -119,13 +120,13 @@ half3 Apply_DetailNormal(float2 detailUv, half3 normalTS, half detailMask)
 #endif
 }
 
-inline void Initialize_StandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData)
+inline void Initialize_StandardLitSurfaceData(float2 uv, out SurfaceData outSurfaceData,FragmentData fragData_)
 {
     half4 albedoAlpha = Sample_AlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
-    outSurfaceData.alpha = Alpha(albedoAlpha.a, _BaseColor, _Cutoff);
+    outSurfaceData.alpha = Alpha(albedoAlpha.a, fragData_._BaseColor, fragData_._Cutoff);
 
-    half4 specGloss = Sample_MetallicSpecGloss(uv, albedoAlpha.a);
-    outSurfaceData.albedo = albedoAlpha.rgb * _BaseColor.rgb;
+    half4 specGloss = Sample_MetallicSpecGloss(uv, albedoAlpha.a,fragData_);
+    outSurfaceData.albedo = albedoAlpha.rgb * fragData_._BaseColor.rgb;
     outSurfaceData.albedo = Alpha_Modulate(outSurfaceData.albedo, outSurfaceData.alpha);
 
 #if _SPECULAR_SETUP
@@ -139,14 +140,14 @@ inline void Initialize_StandardLitSurfaceData(float2 uv, out SurfaceData outSurf
     outSurfaceData.smoothness = specGloss.a;
     outSurfaceData.normalTS = Sample_Normal(uv, TEXTURE2D_ARGS(_BumpMap, sampler_BumpMap), _BumpScale);
     outSurfaceData.occlusion = Sample_Occlusion(uv);
-    outSurfaceData.emission = Sample_Emission(uv, _EmissionColor.rgb, TEXTURE2D_ARGS(_EmissionMap, sampler_EmissionMap));
+    outSurfaceData.emission = Sample_Emission(uv, fragData_._EmissionColor.rgb, TEXTURE2D_ARGS(_EmissionMap, sampler_EmissionMap));
 
     outSurfaceData.clearCoatMask       = half(0.0);
     outSurfaceData.clearCoatSmoothness = half(0.0);
     
 #if defined(_DETAIL)
-    half detailMask = SAMPLE_TEXTURE2D(_DetailMask, sampler_DetailMask, uv).a;
-    float2 detailUv = uv * _DetailAlbedoMap_ST.xy + _DetailAlbedoMap_ST.zw;
+    half detailMask =0;// SAMPLE_TEXTURE2D(_DetailMask, sampler_DetailMask, uv).a;
+    float2 detailUv = uv * fragData_._DetailAlbedoMap_ST.xy + fragData_._DetailAlbedoMap_ST.zw;
     outSurfaceData.albedo = Apply_DetailAlbedo(detailUv, outSurfaceData.albedo, detailMask);
     outSurfaceData.normalTS = Apply_DetailNormal(detailUv, outSurfaceData.normalTS, detailMask);
 #endif
