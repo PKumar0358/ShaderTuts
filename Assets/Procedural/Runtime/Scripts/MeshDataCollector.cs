@@ -93,8 +93,11 @@ namespace PRK.Procedural
         [System.Serializable]
         public struct InstanceData
         {
+         //   [HideInInspector]
             public int Batch_ID;
+          //  [HideInInspector]
             public int Transform_ID;
+           // [HideInInspector]
             public int Lightmap_ID;
             public InstanceData Init()
             {
