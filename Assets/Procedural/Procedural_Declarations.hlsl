@@ -39,6 +39,7 @@ struct TransformData
 StructuredBuffer<InstanceData> _InstanceDataArray;
 StructuredBuffer<TransformData>_TransformDataArray;
 StructuredBuffer<float4>_LightmapScaleOffet;
+
 struct Attributes
 {
     float4 positionOS   : POSITION;
@@ -95,10 +96,6 @@ struct FragmentData
     half _Smoothness;
     half _Metallic;
     half _BumpScale;
-  //  half _Parallax;
- //   half _OcclusionStrength;
-   // half _ClearCoatMask;
-   // half _ClearCoatSmoothness;
     half _DetailAlbedoMapScale;
     half _DetailNormalMapScale;
     half _Surface;
