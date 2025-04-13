@@ -19,7 +19,7 @@ inline void Initialize_StandardLitSurfaceData(float2 uv, out SurfaceData outSurf
     #endif
 
     outSurfaceData.smoothness = specGloss.a;
-    outSurfaceData.normalTS = SMPL_Normal(fragData_.batch_ID,uv, _BumpScale);
+    outSurfaceData.normalTS = SMPL_Normal(fragData_.batch_ID,uv, fragData_._BumpScale);
     outSurfaceData.occlusion = SMPL_Occlusion(fragData_.batch_ID,uv);
     outSurfaceData.emission = SMPL_Emission(fragData_.instance_ID,uv, fragData_._EmissionColor.rgb);
 
@@ -73,20 +73,20 @@ void Initialize_InputData(Varyings input, half3 normalTS, out InputData inputDat
 FragmentData GetFragmentData(in Varyings input)
 {
     FragmentData data;
+    int b_ID=_InstanceInfo_Buffer[input.instance_ID].Batch_ID;
     data.instance_ID=input.instance_ID;
     data.batch_ID=_InstanceInfo_Buffer[input.instance_ID].Batch_ID;
-    data._BaseMap_ST=_BaseMap_ST;
-    data._DetailAlbedoMap_ST=_DetailAlbedoMap_ST;
-    data._BaseColor=_BaseColor;
-    data._SpecColor=_SpecColor;
-    data._EmissionColor=_EmissionColor;
-    data._Cutoff=_Cutoff;
-    data._Smoothness=_Smoothness;
-    data._Metallic=_Metallic;
-    data._BumpScale=_BumpScale;
-    data._DetailAlbedoMapScale=_DetailAlbedoMapScale;
-    data._DetailNormalMapScale=_DetailNormalMapScale;
-    data._Surface=_Surface;
+ 
+    data._BaseColor=_MainColor_Buffer[b_ID];
+    data._SpecColor=_SpecColor_Buffer[b_ID];
+    data._EmissionColor=_EmissionColor_Buffer[b_ID];
+    data._Cutoff=PackedData_0[b_ID].x;
+    data._Smoothness=PackedData_0[b_ID].y;
+    data._Metallic=PackedData_0[b_ID].z;
+    data._BumpScale=PackedData_0[b_ID].w;
+    data._DetailAlbedoMapScale=PackedData_1[b_ID].x;
+    data._DetailNormalMapScale=PackedData_1[b_ID].y;
+    data._Surface=PackedData_1[b_ID].z;
     return data;
 }
 
@@ -145,7 +145,7 @@ half4 ProceduralBatch_Fragment(Varyings input):SV_Target
     Initialize_InputData(input, surfaceData.normalTS, inputData);
     half4 color = UniversalFragmentPBR(inputData, surfaceData);
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
-    color.a =OutputAlpha(color.a, IsSurfaceTypeTransparent(_Surface));
+    color.a =OutputAlpha(color.a, IsSurfaceTypeTransparent(fragdata._Surface));
     
     return color;
 }

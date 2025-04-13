@@ -3,6 +3,17 @@
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
 //_IsBatchRenderer
+StructuredBuffer<float4x4>_ObjTo_WorldMatrix;
+StructuredBuffer<float4x4>_WorldTo_ObjMatrix;
+StructuredBuffer<float4>_MainColor_Buffer;
+StructuredBuffer<float4>_SpecColor_Buffer;
+StructuredBuffer<float4>_EmissionColor_Buffer;
+StructuredBuffer<float4>_ScaleOffset_Main_Buffer;
+StructuredBuffer<float4>_ScaleOffset_Detail_Buffer;
+StructuredBuffer<float4>_ScaleOffset_LightMap_Buffer;
+StructuredBuffer<float4>PackedData_0;
+StructuredBuffer<float4>PackedData_1;
+StructuredBuffer<float4>PackedData_2;
 
 struct Attributes
 {
@@ -52,7 +63,7 @@ TEXTURE2D_ARRAY(NormalMap_Array);  SAMPLER(sampler_NormalMapArray);
 TEXTURE2D_ARRAY(DetailMap_Array);  SAMPLER(sampler_DetailMapArray);
 TEXTURE2D_ARRAY(OcculusionMap_Array);  SAMPLER(sampler_OcculusionMap_Array);
 
-CBUFFER_START(UnityPerMaterial)
+/*CBUFFER_START(UnityPerMaterial)
 float4 _BaseMap_ST;
 float4 _DetailAlbedoMap_ST;
 half4 _BaseColor;
@@ -69,24 +80,22 @@ half _ClearCoatSmoothness;
 half _DetailAlbedoMapScale;
 half _DetailNormalMapScale;
 half _Surface;
-CBUFFER_END
+CBUFFER_END*/
 
 struct FragmentData
 {
     uint instance_ID;
     int batch_ID;
-    float4 _BaseMap_ST;
-    float4 _DetailAlbedoMap_ST;
     half4 _BaseColor;
     half4 _SpecColor;
     half4 _EmissionColor;
-    half _Cutoff;
-    half _Smoothness;
-    half _Metallic;
-    half _BumpScale;
-    half _DetailAlbedoMapScale;
-    half _DetailNormalMapScale;
-    half _Surface;
+    half _Cutoff;//PackedData_0.x
+    half _Smoothness;//PackedData_0.y
+    half _Metallic;//PackedData_0.z
+    half _BumpScale;//PackedData_0.w
+    half _DetailAlbedoMapScale;//PackedData_1.x
+    half _DetailNormalMapScale;//PackedData_1.y
+    half _Surface;//PackedData_1.z
 };
 
 struct  InstanceInfo_Data
@@ -109,10 +118,4 @@ struct BatchInfo_Data
 
 StructuredBuffer<BatchInfo_Data>_BatchInfo_Buffer;
 StructuredBuffer<InstanceInfo_Data>_InstanceInfo_Buffer;
-StructuredBuffer<float4x4>_ObjTo_WorldMatrix;
-StructuredBuffer<float4x4>_WorldTo_ObjMatrix;
-StructuredBuffer<float4>_MainColor_Buffer;
-StructuredBuffer<float4>_EmissionColor_Buffer;
-StructuredBuffer<float4>_ScaleOffset_Main_Buffer;
-StructuredBuffer<float4>_ScaleOffset_Detail_Buffer;
-StructuredBuffer<float4>_ScaleOffset_LightMap_Buffer;
+
