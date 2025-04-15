@@ -86,18 +86,18 @@ Shader "PRK/Procedural_Batch"
 
             // -------------------------------------
             // Shader Stages
-            #pragma vertex ProceduralBatch_Vertex
-            #pragma fragment ProceduralBatch_Fragment
+            #pragma vertex ProceduralLitBatch_0_Vertex
+            #pragma fragment ProceduralLitBatch_0_Fragment
 
             // -------------------------------------
             // Material Keywords
-            #pragma shader_feature_local _NORMALMAP
+          //  #pragma shader_feature_local _NORMALMAP
             #pragma shader_feature_local _RECEIVE_SHADOWS_OFF
-            #pragma shader_feature_local _ _DETAIL_MULX2 _DETAIL_SCALED
-            #pragma shader_feature_local_fragment _SURFACE_TYPE_TRANSPARENT
-            #pragma shader_feature_local_fragment _ALPHATEST_ON
+          //  #pragma shader_feature_local _ _DETAIL_MULX2 _DETAIL_SCALED
+         //   #pragma shader_feature_local_fragment _SURFACE_TYPE_TRANSPARENT
+           // #pragma shader_feature_local_fragment _ALPHATEST_ON
             #pragma shader_feature_local_fragment _ _ALPHAPREMULTIPLY_ON _ALPHAMODULATE_ON
-            #pragma shader_feature_local_fragment _EMISSION
+           // #pragma shader_feature_local_fragment _EMISSION
             #pragma shader_feature_local_fragment _METALLICSPECGLOSSMAP
             #pragma shader_feature_local_fragment _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
             #pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
@@ -106,13 +106,13 @@ Shader "PRK/Procedural_Batch"
 
             // -------------------------------------
             // Universal Pipeline keywords
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
+          //  #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
             #pragma multi_compile _ EVALUATE_SH_MIXED EVALUATE_SH_VERTEX
             #pragma multi_compile_fragment _ _REFLECTION_PROBE_BLENDING
             #pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
-            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+         //   #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
             #pragma multi_compile_fragment _ _SCREEN_SPACE_OCCLUSION
-            #pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
+          //  #pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
             #pragma multi_compile _ _LIGHT_LAYERS
             #pragma multi_compile _ _FORWARD_PLUS
            
@@ -124,10 +124,11 @@ Shader "PRK/Procedural_Batch"
 
             //--------------------------------------
             // GPU Instancing
-            #pragma multi_compile_instancing
-            #pragma instancing_options renderinglayer
+          //  #pragma instancing_options renderinglayer
 
-            #include "Assets/Procedural/LitBatch.hlsl"
+            #include "Assets/Procedural/ProceduralLitBatchPass_VARIANT_0.hlsl"
+            #pragma multi_compile_instancing
+           
             ENDHLSL
         }
 

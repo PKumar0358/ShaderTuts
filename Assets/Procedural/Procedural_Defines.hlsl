@@ -3,17 +3,14 @@
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
 //_IsBatchRenderer
-StructuredBuffer<float4x4>_ObjTo_WorldMatrix;
-StructuredBuffer<float4x4>_WorldTo_ObjMatrix;
-StructuredBuffer<float4>_MainColor_Buffer;
-StructuredBuffer<float4>_SpecColor_Buffer;
-StructuredBuffer<float4>_EmissionColor_Buffer;
-StructuredBuffer<float4>_ScaleOffset_Main_Buffer;
-StructuredBuffer<float4>_ScaleOffset_Detail_Buffer;
+StructuredBuffer<float4x4>_ObjTo_World_Buffer;
+StructuredBuffer<float4x4>_WorldTo_Obj_Buffer;
+StructuredBuffer<float4>_ScaleOffsets_Buffer;
 StructuredBuffer<float4>_ScaleOffset_LightMap_Buffer;
-StructuredBuffer<float4>PackedData_0;
-StructuredBuffer<float4>PackedData_1;
-StructuredBuffer<float4>PackedData_2;
+StructuredBuffer<float4>_Colors_Buffer;
+StructuredBuffer<int4>_InstanceInfo_IDs;//x=Transform id, y= batch id, z=light map id.,w=.scale offset main.
+StructuredBuffer<int4>_BatchInfo_IDs0;//x=main tex id, y= main color id, z= normal map id, w= normal map scale id 
+StructuredBuffer<int4>_BatchInfo_IDs1;//x= detail tex id, y= detail normal map id, z= detail normal map scale id, w= detail scale offset
 
 struct Attributes
 {
@@ -50,18 +47,18 @@ struct Varyings
     #endif
 
     DECLARE_LIGHTMAP_OR_SH(staticLightmapUV, vertexSH, 8);
-    nointerpolation  uint instance_ID:TEXCOORD9;
+    nointerpolation  int4 instance_IDs:TEXCOORD9;//x=instance id, y=batch id, z=transform id, w = scale offset main id
     float4 positionCS               : SV_POSITION;
     UNITY_VERTEX_INPUT_INSTANCE_ID
     UNITY_VERTEX_OUTPUT_STEREO
 };
 
 TEXTURE2D_ARRAY(MainTex_Array);  SAMPLER(sampler_MainTex_Array);
-TEXTURE2D_ARRAY(EmissionTex_Array);  SAMPLER(sampler_EmissionTex_Array);
-TEXTURE2D_ARRAY(DetailTex_Array);  SAMPLER(sampler_DetailTexArray);
-TEXTURE2D_ARRAY(NormalMap_Array);  SAMPLER(sampler_NormalMapArray);
-TEXTURE2D_ARRAY(DetailMap_Array);  SAMPLER(sampler_DetailMapArray);
-TEXTURE2D_ARRAY(OcculusionMap_Array);  SAMPLER(sampler_OcculusionMap_Array);
+//TEXTURE2D_ARRAY(EmissionTex_Array);  SAMPLER(sampler_EmissionTex_Array);
+//TEXTURE2D_ARRAY(DetailTex_Array);  SAMPLER(sampler_DetailTexArray);
+//TEXTURE2D_ARRAY(NormalMap_Array);  SAMPLER(sampler_NormalMapArray);
+//TEXTURE2D_ARRAY(DetailMap_Array);  SAMPLER(sampler_DetailMapArray);
+//TEXTURE2D_ARRAY(OcculusionMap_Array);  SAMPLER(sampler_OcculusionMap_Array);
 
 /*CBUFFER_START(UnityPerMaterial)
 float4 _BaseMap_ST;
@@ -88,34 +85,15 @@ struct FragmentData
     int batch_ID;
     half4 _BaseColor;
     half4 _SpecColor;
-    half4 _EmissionColor;
-    half _Cutoff;//PackedData_0.x
+  //  half4 _EmissionColor;
+   // half _Cutoff;//PackedData_0.x
     half _Smoothness;//PackedData_0.y
     half _Metallic;//PackedData_0.z
-    half _BumpScale;//PackedData_0.w
-    half _DetailAlbedoMapScale;//PackedData_1.x
-    half _DetailNormalMapScale;//PackedData_1.y
+  //  half _BumpScale;//PackedData_0.w
+   // half _DetailAlbedoMapScale;//PackedData_1.x
+  //  half _DetailNormalMapScale;//PackedData_1.y
     half _Surface;//PackedData_1.z
 };
 
-struct  InstanceInfo_Data
-{
-    int Transform_ID;
-    int Batch_ID;
-    int Lightmap_ID;
-};
 
-struct BatchInfo_Data
-{
-    int MainColor_ID;
-    int MainTex_ID;
-    int DetailTex_ID;
-    int NormalTex_ID;
-    int DetailNormalTex_ID;
-    int OcculusionMap_ID;
-    int EmissionTex_ID;
-};
-
-StructuredBuffer<BatchInfo_Data>_BatchInfo_Buffer;
-StructuredBuffer<InstanceInfo_Data>_InstanceInfo_Buffer;
 
