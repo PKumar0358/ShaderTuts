@@ -40,15 +40,42 @@ namespace PRK.Procedural
     }
     public partial class BatchCreator : MonoBehaviour
     {
+        public static Dictionary<Texture2D,int> tex_main;
+        public static  Dictionary<Texture2D,int> tex_normal_map;
+        public static  Dictionary<Texture2D, int> tex_detail;
+        public static  Dictionary<Texture2D,int> tex_specular_map;
+        public static  Dictionary<Texture2D,int> tex_metalic_map;
+        public static  Dictionary<Texture2D, int> tex_detail_normal_map;
+        
+        public List<Batch_Info> m_Batch_Info;
+        public List<Material> materials;
+        public List<Color> colors_list;
         private void Start()
         {
-            Batch_Info batchInfo = new Batch_Info(-1);
-            AddScaleOffsetToDictionary(batchInfo);
-            Debug.Log(batchInfo.batch_id);
+           // Prepare_BatchData(transform);
         }
 
+        [ContextMenu("Prepare_BatchData")]
+        private void Prepare_BatchData()
+        {
+            Prepare_BatchData(transform);
+        }
         private void Prepare_BatchData(Transform parent_)
         {
+            tex_main = new Dictionary<Texture2D, int>();
+            tex_detail = new Dictionary<Texture2D, int>();
+            tex_normal_map = new Dictionary<Texture2D, int>();
+            tex_specular_map = new Dictionary<Texture2D, int>();
+            tex_metalic_map = new Dictionary<Texture2D, int>();
+            tex_detail_normal_map = new Dictionary<Texture2D, int>();
+            Dictionary<string,Dictionary<Texture2D, int>>ddt = new Dictionary<string,Dictionary<Texture2D, int>>();
+            ddt.Add("main",tex_main);
+            ddt.Add("bump",tex_normal_map);
+            ddt.Add("detail",tex_detail);
+            ddt.Add("detailbump",tex_detail_normal_map);
+            m_Batch_Info=new List<Batch_Info>();
+            colors_list = new List<Color>();
+            materials=new List<Material>();
             List<Instance_Info>instance_info_list = new List<Instance_Info>();
             Dictionary<Mesh,int>mesh_ids = new Dictionary<Mesh,int>();
             Dictionary<int,int[]>mesh_submesh_ids = new Dictionary<int,int[]>();
@@ -69,6 +96,7 @@ namespace PRK.Procedural
                        if (!meshids_and_materials.ContainsKey(mesh_id))
                            meshids_and_materials.Add(mesh_id,renderers[i].sharedMaterials);
                        int c2 = filter_.sharedMesh.subMeshCount;
+                      // Debug.Log($"{c2}  {renderers[i].sharedMaterials.Length}",t);
                        if (!mesh_submesh_ids.ContainsKey(mesh_id))
                            mesh_submesh_ids.Add(mesh_id,NewIds_List(c2));
                        for (int j = 0; j < c2; j++)
@@ -78,13 +106,24 @@ namespace PRK.Procedural
            }
            
            Dictionary<Vector4, int> scale_offsets=new Dictionary<Vector4, int>();
-           Dictionary<Vector4,int>colors=new Dictionary<Vector4,int>();
+           Dictionary<Vector4,int>colors_dict=new Dictionary<Vector4,int>();
            int batch_counter = 0;
            foreach (var x in mesh_submesh_ids)
            {
-               Batch_Info b_info = new Batch_Info(batch_counter);
-               batch_counter++;
+               int[] submesh_ids = x.Value;
+               for (int i = 0; i < submesh_ids.Length; i++)
+               {
+                   Material mat_ = meshids_and_materials[x.Key][i];
+                   materials.Add(mat_);
+                   Batch_Info b_info = new Batch_Info(batch_counter);
+                   Add_MaterialData_ToDictionaries(b_info,mat_,scale_offsets);
+                   b_info.AddInfo(mat_,out Color mainclr_,out Color emissionclr_);
+                   b_info.color_main_id=AddToDictionary(colors_dict,mainclr_);
+                   m_Batch_Info.Add(b_info);
+                   batch_counter++;
+               }
            }
+          
         }
 
         private int[] NewIds_List(int count_)
@@ -128,10 +167,19 @@ namespace PRK.Procedural
             
         }
 
-        private void AddScaleOffsetToDictionary(Batch_Info batchInfo_)//Material mat_,Dictionary<Vector4,int>dict_)
+        private void Add_MaterialData_ToDictionaries(Batch_Info batchInfo_,Material mat_,Dictionary<Vector4,int>dict_scaleOffset_)
         {
-            batchInfo_.batch_id = 0;
+            Vector4 v1 = GetScaleOffset("_BaseMap", mat_);
+            Vector4 v2 = GetScaleOffset("_DetailAlbedoMap", mat_);
+            batchInfo_.scale_offset_main_id = AddToDictionary(dict_scaleOffset_,v1);
+            batchInfo_.scale_offset_detail_id = AddToDictionary(dict_scaleOffset_,v2);
         }
+
+        public void AddTexDataToDictionaries(Material mat_,Batch_Info batchInfo_)
+        {
+            
+        }
+        
         private Vector4 GetScaleOffset(string Name_,Material mat_)
         {
             Vector4 scaleoffset=new Vector4(1,1,0,0);
@@ -159,6 +207,7 @@ namespace PRK.Procedural
   
     }
 
+    [System.Serializable]
     public class Instance_Info
     {
         public int id;
@@ -173,19 +222,65 @@ namespace PRK.Procedural
             id=++instance_counter_;
         }
     }
+    [System.Serializable]
     public class Batch_Info
     {
-        public int batch_id=0;
-        public int scale_offset_main_id=0;
-        public int scale_offset_detail_id=0;
-        public int color_main_id=0;
+        public int batch_id=-1;
+        public int scale_offset_main_id=-1;
+        public int scale_offset_detail_id=-1;
+        public int color_main_id=-1;
         public int texture_main_id=-1;
         public int texture_normalmap_id=-1;
         public int texture_detail_id=-1;
         public int texture_detail_normalmap_id=-1;
+        public Material m_Material;
+        public Texture2D tex_main;
+        public Texture2D tex_normalmap;
+        public Texture2D tex_detail;
+        public Texture2D tex_detail_normalmap;
         public Batch_Info(int batch_counter_)
         {
             batch_id=batch_counter_;
+        }
+
+        public void AddInfo(Material mat_,out Color mainColor_,out Color emissionColor_)
+        {
+            mainColor_ = mat_.GetColor("_BaseColor");
+            emissionColor_ = mat_.GetColor("_EmissionColor");
+            m_Material = mat_;
+            Texture2D tex_0 =mat_.GetTexture("_BaseMap") as Texture2D;
+            tex_main = tex_0;
+            Texture2D tex_1 =mat_.GetTexture("_BumpMap") as Texture2D;  
+            tex_normalmap= tex_1;
+            Texture2D tex_2 =mat_.GetTexture("_MetallicGlossMap") as Texture2D;  
+            Texture2D tex_3 =mat_.GetTexture("_SpecGlossMap") as Texture2D;  
+            Texture2D tex_4 =mat_.GetTexture("_DetailAlbedoMap") as Texture2D;  
+            tex_detail= tex_4;
+            Texture2D tex_5 =mat_.GetTexture("_DetailNormalMap") as Texture2D;
+            tex_detail_normalmap = tex_5;
+           texture_main_id=AddToDictionary(BatchCreator.tex_main,tex_0);
+           texture_normalmap_id=AddToDictionary(BatchCreator.tex_normal_map,tex_1);
+            AddToDictionary(BatchCreator.tex_metalic_map,tex_2);
+            AddToDictionary(BatchCreator.tex_specular_map,tex_3);
+            AddToDictionary(BatchCreator.tex_detail,tex_4);
+            texture_detail_normalmap_id=  AddToDictionary(BatchCreator.tex_detail_normal_map,tex_5);
+        }
+
+        private int AddToDictionary(Dictionary<Texture2D, int> dict,Texture2D tex_)
+        {
+            int i = -1;
+            if (tex_ != null)
+            {
+                if(dict.ContainsKey(tex_))
+                    i=dict[tex_];
+                else
+                {
+                    i=dict.Count;
+                    dict.Add(tex_, i);
+                }
+            }
+
+            return i;
         }
     }
 }
