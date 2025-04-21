@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace PRK.Procedural
@@ -112,7 +113,9 @@ namespace PRK.Procedural
                    m_Batch_Info.Add(b_info);
                }
            }
-          
+           batchData.AddData(mesh_ids.Keys.ToArray());
+           batchData.AddData(renderers);
+           batchData.AddData(batch_Instance_Dict);
         }
 
         private int[] NewIds_List(int count_)

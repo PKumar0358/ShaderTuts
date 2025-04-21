@@ -10,7 +10,42 @@ namespace PRK.Procedural
 
     public partial class BatchData_Config_Functions
     {
-        
+        public void Save()
+        {
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssetIfDirty(this);
+            AssetDatabase.Refresh();
+        }
+        public void AddData(Mesh[] meshes_,bool save=false)
+        {
+            m_Meshes = new List<Mesh>(meshes_);
+            if (save)
+                Save();
+        }
+        public void AddData(MeshRenderer[] renderers_,bool save=false)
+        {
+            int c = renderers_.Length;
+            m_Positions = new List<Vector3>(c);
+            m_Angles= new List<Vector3>(c);
+            m_Scales= new List<Vector3>(c);
+            for (int i = 0; i < c; i++)
+            {
+                m_Positions.Add(renderers_[i].transform.position);
+                m_Angles.Add(renderers_[i].transform.eulerAngles);
+                m_Scales.Add(renderers_[i].transform.lossyScale);
+            }
+            if (save)
+                Save();
+        }
+        public void AddData(Dictionary<int, List<Instance_Info>>batch_instance_dict,bool save=false)
+        {
+            m_Instance_Info_Array = new List<Instance_Info>();
+            foreach (var x in batch_instance_dict)
+                m_Instance_Info_Array.AddRange(x.Value);
+            if (save)
+                Save();
+            
+        }
     }
     #endif
     [CreateAssetMenu]
