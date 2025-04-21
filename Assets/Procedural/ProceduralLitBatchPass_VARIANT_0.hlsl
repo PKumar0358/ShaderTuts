@@ -6,8 +6,7 @@ void SetUp_InstancingData(uint i_id_,inout Varyings output)
     output.instance_IDs.x=i_id_;
     output.instance_IDs.y=_InstanceInfo_IDs[i_id_].y;
     output.instance_IDs.z=_InstanceInfo_IDs[i_id_].x;
-    output.instance_IDs.w=_InstanceInfo_IDs[i_id_].w;
-    
+    output.instance_IDs.w=_InstanceInfo_IDs[i_id_].w;    
 }
 
 Varyings ProceduralLitBatch_0_Vertex(Attributes input,uint id_:SV_InstanceID)
