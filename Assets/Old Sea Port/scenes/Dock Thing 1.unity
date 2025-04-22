@@ -1417,7 +1417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fdc2cd490c8c8245a07e9cdcd4c6145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batchData: {fileID: 11400000, guid: f98ab28b72daf744fa6d425b4238dfb6, type: 2}
   m_Batch_Info:
   - batch_id: 0
     scale_offset_main_id: 0
@@ -2277,6 +2276,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d856bef9752f4b94792d16ec0dfbaa6b, type: 2}
   - {fileID: 2100000, guid: 76b27126339d3d041b24024587f42d55, type: 2}
   colors_list: []
+  batch_config: {fileID: 11400000, guid: f98ab28b72daf744fa6d425b4238dfb6, type: 2}
 --- !u!1 &717204433
 GameObject:
   m_ObjectHideFlags: 0

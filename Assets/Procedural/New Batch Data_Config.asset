@@ -9,67 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b12e81347885742a52d4beeca7bc8d, type: 3}
+  m_Script: {fileID: 11500000, guid: d164bf1b2fca4e0438b7305f4ec2257c, type: 3}
   m_Name: New Batch Data_Config
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: c211ea10ba0caea43bbc0794365ad986, type: 2}
-  m_Meshes:
-  - {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
-  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - {fileID: 4300000, guid: 8bf66b04564362f459c70d380960818a, type: 3}
-  - {fileID: 4300000, guid: 42b0d009ef33b5b488d26678ec1faa22, type: 3}
-  - {fileID: 4300000, guid: dccefce15f3680742b1f2b9ee8f95dd8, type: 3}
-  - {fileID: 4300000, guid: 5be8634ccfcc74841a2130c8f8a656af, type: 3}
-  - {fileID: 4300000, guid: 4ab325a57b9cd6a4a937fc4a13fc2ad5, type: 3}
-  - {fileID: 4300004, guid: 4ab325a57b9cd6a4a937fc4a13fc2ad5, type: 3}
-  - {fileID: 4300000, guid: 2a6baaf4ee4ed4649a1c0c74be99a7f2, type: 3}
-  - {fileID: 4300004, guid: 2a6baaf4ee4ed4649a1c0c74be99a7f2, type: 3}
-  - {fileID: 4300004, guid: 5b10a3532c8c3cc4da4dc079804cdf2a, type: 3}
-  - {fileID: 4300002, guid: 5b10a3532c8c3cc4da4dc079804cdf2a, type: 3}
-  - {fileID: 4300004, guid: 24862a2d9bb989949893146bd2d33428, type: 3}
-  - {fileID: 4300002, guid: 24862a2d9bb989949893146bd2d33428, type: 3}
-  - {fileID: 4300000, guid: e20a355c375c4bf4e8f782742812dcba, type: 3}
-  - {fileID: 4300000, guid: b28782be19c0382489f049a8c11e11ff, type: 3}
-  - {fileID: 4300000, guid: b06924d9cdbb1574983828a10340bf52, type: 3}
-  - {fileID: 4300002, guid: f74e57a5ad5640f4da5eb349ae178364, type: 3}
-  - {fileID: 4300004, guid: f74e57a5ad5640f4da5eb349ae178364, type: 3}
-  - {fileID: 4300006, guid: 1db8014869e9de646abdb86a9b03073c, type: 3}
-  - {fileID: 4300004, guid: 1db8014869e9de646abdb86a9b03073c, type: 3}
-  - {fileID: 4300000, guid: fe7815a17afaa784a80f9bab1b3aa807, type: 3}
-  - {fileID: 4300000, guid: 734611d8ae4d957478c45d109af042a7, type: 3}
-  - {fileID: 4300000, guid: 6d50435c0af55b74f95f6881ff19d8ff, type: 3}
-  - {fileID: 4300000, guid: a3983032df6f6a4498ab985c4088f21d, type: 3}
-  - {fileID: 4300002, guid: a3983032df6f6a4498ab985c4088f21d, type: 3}
-  - {fileID: 4300000, guid: 188259caed4c91d4fa37496fab8084ec, type: 3}
-  - {fileID: 4300000, guid: 8b50be6bc899b9140ad8ff1a5d587a56, type: 3}
-  - {fileID: 4300000, guid: cb1f6f82cc530a74c940352d001d34d1, type: 3}
-  - {fileID: 4300002, guid: c4cc542ae7512ef458debcc6dee326dc, type: 3}
-  - {fileID: 4300000, guid: 5b668adf7e553bf47b208d001bca688b, type: 3}
-  - {fileID: 4300000, guid: bd57b9b38c2b9504fba073fc57c09738, type: 3}
-  - {fileID: 4300000, guid: 908cb165db09e6d42a438cfc3af8efe0, type: 3}
-  - {fileID: 0}
-  - {fileID: 4300006, guid: 21e831160f0c20a4abe945f214240beb, type: 3}
-  - {fileID: 4300000, guid: 21e831160f0c20a4abe945f214240beb, type: 3}
-  - {fileID: 4300004, guid: 21e831160f0c20a4abe945f214240beb, type: 3}
-  - {fileID: 4300002, guid: 21e831160f0c20a4abe945f214240beb, type: 3}
-  - {fileID: 4300000, guid: b2cfdd5ceba6f884e9553575bacbc921, type: 3}
-  - {fileID: 4300000, guid: 4d665f3a611984d47996c09173f54b37, type: 3}
-  - {fileID: 4300000, guid: e11e5e8a26ce863468d2da27e1abe812, type: 3}
-  - {fileID: 4300010, guid: 8cbbacdc2797abc488851a95c2635bf3, type: 3}
-  - {fileID: 4300012, guid: 8cbbacdc2797abc488851a95c2635bf3, type: 3}
-  - {fileID: 4300002, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
-  - {fileID: 4300000, guid: 2fa7e1ef5baf7114593a7471e8065425, type: 3}
-  - {fileID: 4300000, guid: 69aa8b9d7d649a14b937cf6e269319c2, type: 3}
-  - {fileID: 4300000, guid: ddbd88117fbb37149967fc59345bf64e, type: 3}
-  - {fileID: 4300000, guid: d2e718e3487d65f4e982de3713b184a6, type: 3}
-  - {fileID: 4300000, guid: 592baa9a80ff7844bbfcc133a0f63878, type: 3}
-  - {fileID: 4300000, guid: 57c2463eb8525a342959a81e4db49b37, type: 3}
-  - {fileID: 4300000, guid: 96f68129d85fbc340987bf3fe5fb6079, type: 3}
-  - {fileID: 4300002, guid: 96f68129d85fbc340987bf3fe5fb6079, type: 3}
-  - {fileID: 4300000, guid: cfd984fc4f7f10c4eb63402c8dc759a2, type: 3}
-  - {fileID: 4300000, guid: ceaf37662ffe76840a151e0bc5b366ab, type: 3}
-  - {fileID: 4300000, guid: 74c5832b0954fd44d8cffe225158ceea, type: 3}
-  - {fileID: 4300000, guid: bc1283a4efa3cd647924ae2bca1f366a, type: 3}
+  m_Material: {fileID: 0}
+  m_Meshes: []
   m_Positions: []
   m_Angles: []
   m_Scales: []
@@ -77,3 +21,292 @@ MonoBehaviour:
   m_Batch_Info_Array: []
   m_Colors_Array: []
   m_Scale_Offset_Array: []
+  textures:
+  - BaseMap_: {fileID: 2800000, guid: d5b0c3d98c949f64aacf75b764a72b9b, type: 3}
+    BumpMap: {fileID: 2800000, guid: aba0372edfc437b4e8a9003ecf26ca4f, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: 2c3cac3e2fe53f34089d2fe02fdfde58, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 2800000, guid: d5b0c3d98c949f64aacf75b764a72b9b, type: 3}
+    DetailNormalMap: {fileID: 2800000, guid: aba0372edfc437b4e8a9003ecf26ca4f, type: 3}
+    OcclusionMap: {fileID: 2800000, guid: 947d2f8b002d964479658be1ede6c20c, type: 3}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: d5b0c3d98c949f64aacf75b764a72b9b, type: 3}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 070cb3edcb351cd4ab6db4c57bfd8fc5, type: 3}
+    BumpMap: {fileID: 2800000, guid: 35097fcb9a018ac49b6657d0b8138799, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: 5af8b9960606490438aa36ffda4b3c45, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: db385adbcab4293439652164d21a5628, type: 3}
+    BumpMap: {fileID: 2800000, guid: e287ae967fe30984599057cde5b3100e, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: 8f9076885adb07442b8f0cafcbcb78cd, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: db385adbcab4293439652164d21a5628, type: 3}
+    BumpMap: {fileID: 2800000, guid: e287ae967fe30984599057cde5b3100e, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: c394d5e62f0e19145b7e7fbe1b301a26, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 228fb3413d913f949866ba77fe8dfe28, type: 3}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 2800000, guid: 3f2eecefbf7d5f44984eb80814ae8f24, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 0}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 070cb3edcb351cd4ab6db4c57bfd8fc5, type: 3}
+    BumpMap: {fileID: 2800000, guid: 35097fcb9a018ac49b6657d0b8138799, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: d4f32d4cbb3702e48b4af45a1ba4f043, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: aad4f261a7e759645bea7a21c20b02b6, type: 3}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 2800000, guid: aad4f261a7e759645bea7a21c20b02b6, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 8bb74e304c595b9459763b73676acba2, type: 3}
+    BumpMap: {fileID: 2800000, guid: 6c00261042754b84fbe58b6bf7064b88, type: 3}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: b075d48064d55484f8f593efb6941674, type: 3}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 2800000, guid: aa8cd394dd912294a9201bcd17b8cedb, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 3f2eecefbf7d5f44984eb80814ae8f24, type: 3}
+    BumpMap: {fileID: 2800000, guid: 8f80a4e136ce4244e8c2ebe9f3bb4aae, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: a94ce357ed0012e4fa139af6829d593b, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 86cdca6ff04d7b24084a7525617aabd0, type: 3}
+    BumpMap: {fileID: 2800000, guid: bbbacd6962f68d84db49ce9cc7c21e40, type: 3}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: d5b0c3d98c949f64aacf75b764a72b9b, type: 3}
+    BumpMap: {fileID: 2800000, guid: aba0372edfc437b4e8a9003ecf26ca4f, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: 750737eca5e65114fb9043ec4733623a, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 2800000, guid: 2c3cac3e2fe53f34089d2fe02fdfde58, type: 3}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: a29d97ef1cbfdd2448b81f9e41c18533, type: 3}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: df3dcc1fbf4ce1d4aa1361159004567b, type: 3}
+    BumpMap: {fileID: 2800000, guid: 3968a51f63f083440bb6cb07cba49d18, type: 3}
+    MetallicGlossMap: {fileID: 0}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 0}
+    BumpMap: {fileID: 0}
+    MetallicGlossMap: {fileID: 2800000, guid: aad4f261a7e759645bea7a21c20b02b6, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
+  - BaseMap_: {fileID: 2800000, guid: 3f2eecefbf7d5f44984eb80814ae8f24, type: 3}
+    BumpMap: {fileID: 2800000, guid: 8f80a4e136ce4244e8c2ebe9f3bb4aae, type: 3}
+    MetallicGlossMap: {fileID: 2800000, guid: ea1e2578b9b1cc2498accc121b043e0f, type: 3}
+    SpecGlossMap: {fileID: 0}
+    DetailAlbedoMap: {fileID: 0}
+    DetailNormalMap: {fileID: 0}
+    OcclusionMap: {fileID: 0}
+    EmissionMap: {fileID: 0}
+    BaseMap_ID: -1
+    BumpMap_ID: -1
+    MetallicGlossMap_ID: -1
+    SpecGlossMap_ID: -1
+    DetailAlbedoMap_ID: -1
+    DetailNormalMap_ID: -1
+    OcclusionMap_ID: -1
+    EmissionMap_ID: -1
