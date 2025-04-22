@@ -1,0 +1,3378 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1f139b31e34a748bc10c7f8d609c7e, type: 3}
+  m_Name: Environment__CombinedMeshBatch_DataConfig
+  m_EditorClassIdentifier: 
+  raw_mesh_list: []
+  material_list: []
+  positionList: []
+  rotationList: []
+  scaleList: []
+  batch_Tex_IDs:
+  - tex_main: 0
+    tex_normal_map: 0
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 0
+    tex_detail_normal_map: 0
+    tex_occulussion_map: 0
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 1
+    tex_normal_map: 1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 1
+    tex_detail_normal_map: 1
+    tex_occulussion_map: 1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 2
+    tex_normal_map: 2
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 2
+    tex_detail_normal_map: 2
+    tex_occulussion_map: 2
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 3
+    tex_normal_map: 3
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 3
+    tex_detail_normal_map: 3
+    tex_occulussion_map: 3
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 4
+    tex_normal_map: 4
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 4
+    tex_detail_normal_map: 4
+    tex_occulussion_map: 4
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 5
+    tex_normal_map: 5
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 5
+    tex_detail_normal_map: 5
+    tex_occulussion_map: 5
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 6
+    tex_normal_map: 6
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 6
+    tex_detail_normal_map: 6
+    tex_occulussion_map: 6
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 7
+    tex_normal_map: 7
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 7
+    tex_detail_normal_map: 7
+    tex_occulussion_map: 7
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 8
+    tex_normal_map: 8
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 8
+    tex_detail_normal_map: 8
+    tex_occulussion_map: 8
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 9
+    tex_normal_map: 9
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 9
+    tex_detail_normal_map: 9
+    tex_occulussion_map: 9
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 10
+    tex_normal_map: 10
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 10
+    tex_detail_normal_map: 10
+    tex_occulussion_map: 10
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 11
+    tex_normal_map: 11
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 11
+    tex_detail_normal_map: 11
+    tex_occulussion_map: 11
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 12
+    tex_normal_map: 12
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 12
+    tex_detail_normal_map: 12
+    tex_occulussion_map: 12
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 13
+    tex_normal_map: 13
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 13
+    tex_detail_normal_map: 13
+    tex_occulussion_map: 13
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 14
+    tex_normal_map: 14
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 14
+    tex_detail_normal_map: 14
+    tex_occulussion_map: 14
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 15
+    tex_normal_map: 15
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 15
+    tex_detail_normal_map: 15
+    tex_occulussion_map: 15
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 16
+    tex_normal_map: 16
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 16
+    tex_detail_normal_map: 16
+    tex_occulussion_map: 16
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 17
+    tex_normal_map: 17
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 17
+    tex_detail_normal_map: 17
+    tex_occulussion_map: 17
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 18
+    tex_normal_map: 18
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 18
+    tex_detail_normal_map: 18
+    tex_occulussion_map: 18
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 19
+    tex_normal_map: 19
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 19
+    tex_detail_normal_map: 19
+    tex_occulussion_map: 19
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 20
+    tex_normal_map: 20
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 20
+    tex_detail_normal_map: 20
+    tex_occulussion_map: 20
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 21
+    tex_normal_map: 21
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 21
+    tex_detail_normal_map: 21
+    tex_occulussion_map: 21
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 22
+    tex_normal_map: 22
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 22
+    tex_detail_normal_map: 22
+    tex_occulussion_map: 22
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 23
+    tex_normal_map: 23
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 23
+    tex_detail_normal_map: 23
+    tex_occulussion_map: 23
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 24
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 25
+    tex_normal_map: 24
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 26
+    tex_normal_map: 25
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 27
+    tex_normal_map: 26
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 28
+    tex_normal_map: 27
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 29
+    tex_normal_map: 28
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 30
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 31
+    tex_normal_map: 29
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 32
+    tex_normal_map: 30
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 33
+    tex_normal_map: 31
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 34
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 35
+    tex_normal_map: 32
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 36
+    tex_normal_map: 33
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 37
+    tex_normal_map: 34
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 38
+    tex_normal_map: 35
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 39
+    tex_normal_map: 36
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 40
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 41
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 42
+    tex_normal_map: 37
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 43
+    tex_normal_map: 38
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 44
+    tex_normal_map: 39
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 45
+    tex_normal_map: 40
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 46
+    tex_normal_map: 41
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 47
+    tex_normal_map: 42
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 48
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 49
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 50
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 51
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 52
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 53
+    tex_normal_map: 43
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 24
+    tex_detail_normal_map: 24
+    tex_occulussion_map: 24
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 54
+    tex_normal_map: 44
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 25
+    tex_detail_normal_map: 25
+    tex_occulussion_map: 25
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 55
+    tex_normal_map: 45
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 26
+    tex_detail_normal_map: 26
+    tex_occulussion_map: 26
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 56
+    tex_normal_map: 46
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 27
+    tex_detail_normal_map: 27
+    tex_occulussion_map: 27
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 57
+    tex_normal_map: 47
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 28
+    tex_detail_normal_map: 28
+    tex_occulussion_map: 28
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 58
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 59
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 60
+    tex_normal_map: 48
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 61
+    tex_normal_map: 49
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 62
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 63
+    tex_normal_map: 50
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 64
+    tex_normal_map: 51
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 65
+    tex_normal_map: 52
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 66
+    tex_normal_map: 53
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 67
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 68
+    tex_normal_map: 54
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 69
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 70
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 71
+    tex_normal_map: 55
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 72
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 73
+    tex_normal_map: 56
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 74
+    tex_normal_map: 57
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 75
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 76
+    tex_normal_map: 58
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 77
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 78
+    tex_normal_map: 59
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 79
+    tex_normal_map: 60
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 80
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 81
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 82
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 83
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 84
+    tex_normal_map: 61
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 85
+    tex_normal_map: 62
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 86
+    tex_normal_map: 63
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 87
+    tex_normal_map: 64
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 88
+    tex_normal_map: 65
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 89
+    tex_normal_map: 66
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 90
+    tex_normal_map: 67
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 91
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 92
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 93
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 94
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 95
+    tex_normal_map: 68
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 96
+    tex_normal_map: 69
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 97
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 98
+    tex_normal_map: 70
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 99
+    tex_normal_map: 71
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 100
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 101
+    tex_normal_map: 72
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 102
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 103
+    tex_normal_map: 73
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 104
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 105
+    tex_normal_map: 74
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 106
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 107
+    tex_normal_map: 75
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 108
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 109
+    tex_normal_map: 76
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 110
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 111
+    tex_normal_map: 77
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 112
+    tex_normal_map: 78
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 113
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 114
+    tex_normal_map: 79
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 115
+    tex_normal_map: 80
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 116
+    tex_normal_map: 81
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 117
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 118
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 119
+    tex_normal_map: 82
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 120
+    tex_normal_map: 83
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 121
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 122
+    tex_normal_map: 84
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 123
+    tex_normal_map: 85
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 124
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 125
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 126
+    tex_normal_map: 86
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 127
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 128
+    tex_normal_map: 87
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 129
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 130
+    tex_normal_map: 88
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 131
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 132
+    tex_normal_map: 89
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 133
+    tex_normal_map: 90
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 134
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 135
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 136
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 137
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 138
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 139
+    tex_normal_map: 91
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 140
+    tex_normal_map: 92
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 141
+    tex_normal_map: 93
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 142
+    tex_normal_map: 94
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 143
+    tex_normal_map: 95
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 144
+    tex_normal_map: 96
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 145
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 146
+    tex_normal_map: 97
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 147
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 148
+    tex_normal_map: 98
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 29
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 149
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 150
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 151
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 152
+    tex_normal_map: 99
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 153
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 154
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 155
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 156
+    tex_normal_map: 100
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 30
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 157
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 158
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 159
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 160
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 161
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 162
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 163
+    tex_normal_map: 101
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 164
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 165
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 166
+    tex_normal_map: 102
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 167
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 168
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 169
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 170
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 171
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 172
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 173
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 174
+    tex_normal_map: 103
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 175
+    tex_normal_map: 104
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 176
+    tex_normal_map: 105
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 177
+    tex_normal_map: 106
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 178
+    tex_normal_map: 107
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 179
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 180
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 181
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 182
+    tex_normal_map: 108
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 183
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 184
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 185
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 186
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 187
+    tex_normal_map: 109
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 188
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 189
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 190
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 191
+    tex_normal_map: 110
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 31
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 192
+    tex_normal_map: 111
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 193
+    tex_normal_map: 112
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 194
+    tex_normal_map: 113
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 195
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 196
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 197
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 198
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 199
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 200
+    tex_normal_map: 114
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 201
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 202
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 203
+    tex_normal_map: 115
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 32
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 204
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 205
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 206
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 207
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 208
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 209
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 210
+    tex_normal_map: 116
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 211
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 212
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 213
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 214
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 215
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 216
+    tex_normal_map: 117
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 217
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 218
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 219
+    tex_normal_map: 118
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 220
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 221
+    tex_normal_map: 119
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 222
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 223
+    tex_normal_map: 120
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 224
+    tex_normal_map: 121
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 225
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 226
+    tex_normal_map: 122
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 227
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 228
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 229
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 230
+    tex_normal_map: 123
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 231
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 232
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 233
+    tex_normal_map: 124
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 234
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 235
+    tex_normal_map: 125
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 236
+    tex_normal_map: 126
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 237
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 238
+    tex_normal_map: 127
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 239
+    tex_normal_map: 128
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 240
+    tex_normal_map: 129
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 241
+    tex_normal_map: 130
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 242
+    tex_normal_map: 131
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 243
+    tex_normal_map: 132
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 244
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 245
+    tex_normal_map: 133
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 246
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 247
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 248
+    tex_normal_map: 134
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 249
+    tex_normal_map: 135
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 250
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 251
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 252
+    tex_normal_map: 136
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 253
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 254
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 255
+    tex_normal_map: 137
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 256
+    tex_normal_map: 138
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 257
+    tex_normal_map: 139
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 258
+    tex_normal_map: 140
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 259
+    tex_normal_map: 141
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 260
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 261
+    tex_normal_map: 142
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 262
+    tex_normal_map: 143
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 263
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 264
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 265
+    tex_normal_map: 144
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 266
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 267
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 268
+    tex_normal_map: 145
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 269
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 270
+    tex_normal_map: 146
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 271
+    tex_normal_map: 147
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 272
+    tex_normal_map: 148
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 273
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 274
+    tex_normal_map: 149
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 275
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 276
+    tex_normal_map: 150
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 29
+    tex_detail_normal_map: 29
+    tex_occulussion_map: 33
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 277
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 278
+    tex_normal_map: 151
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 279
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 280
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 281
+    tex_normal_map: 152
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 282
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 283
+    tex_normal_map: 153
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 284
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 285
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 286
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 287
+    tex_normal_map: 154
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 288
+    tex_normal_map: 155
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 289
+    tex_normal_map: 156
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 290
+    tex_normal_map: 157
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 291
+    tex_normal_map: 158
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 292
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 293
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 294
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 295
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 296
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 297
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 298
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 299
+    tex_normal_map: 159
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 300
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 301
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 302
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 303
+    tex_normal_map: 160
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 304
+    tex_normal_map: 161
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 305
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 306
+    tex_normal_map: 162
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 307
+    tex_normal_map: 163
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 308
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 309
+    tex_normal_map: 164
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 310
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 311
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 312
+    tex_normal_map: 165
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 313
+    tex_normal_map: 166
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 314
+    tex_normal_map: 167
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 315
+    tex_normal_map: 168
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 316
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 317
+    tex_normal_map: 169
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 318
+    tex_normal_map: 170
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 319
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 320
+    tex_normal_map: 171
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 321
+    tex_normal_map: 172
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 322
+    tex_normal_map: 173
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 323
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 324
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 325
+    tex_normal_map: 174
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 326
+    tex_normal_map: 175
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 327
+    tex_normal_map: 176
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 328
+    tex_normal_map: 177
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 329
+    tex_normal_map: 178
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 330
+    tex_normal_map: 179
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 331
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 332
+    tex_normal_map: 180
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 333
+    tex_normal_map: 181
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 334
+    tex_normal_map: 182
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 335
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 336
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 337
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 338
+    tex_normal_map: 183
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 339
+    tex_normal_map: 184
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 340
+    tex_normal_map: 185
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 341
+    tex_normal_map: 186
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 342
+    tex_normal_map: 187
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 343
+    tex_normal_map: 188
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 344
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 345
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 346
+    tex_normal_map: 189
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 347
+    tex_normal_map: 190
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 348
+    tex_normal_map: 191
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 349
+    tex_normal_map: 192
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 350
+    tex_normal_map: 193
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 34
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 351
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 352
+    tex_normal_map: 194
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 30
+    tex_detail_normal_map: 30
+    tex_occulussion_map: 35
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 353
+    tex_normal_map: 195
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 31
+    tex_detail_normal_map: 31
+    tex_occulussion_map: 36
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 354
+    tex_normal_map: 196
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 32
+    tex_detail_normal_map: 32
+    tex_occulussion_map: 37
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 355
+    tex_normal_map: 197
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 33
+    tex_detail_normal_map: 33
+    tex_occulussion_map: 38
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 356
+    tex_normal_map: 198
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 34
+    tex_detail_normal_map: 34
+    tex_occulussion_map: 39
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 357
+    tex_normal_map: 199
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: 35
+    tex_detail_normal_map: 35
+    tex_occulussion_map: 40
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 358
+    tex_normal_map: 200
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  batch_IDs0: []
+  m_BaseMaps: []
+  m_BumpMaps: []
+  m_MetallicGloassMaps: []
+  m_SpecGloassMaps: []
+  m_DetailAlbedoMaps: []
+  m_DetailMasks: []
+  m_DetailNormalMaps: []
+  m_OcclusionMaps: []
+  m_EmissionMaps: []

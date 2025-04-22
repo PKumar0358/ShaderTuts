@@ -13,11 +13,191 @@ MonoBehaviour:
   m_Name: GameObject__CombinedMeshBatch_DataConfig
   m_EditorClassIdentifier: 
   raw_mesh_list: []
-  material_list: []
+  material_list:
+  - {fileID: 2100000, guid: 3ae387f88eaec6e408d8bd441dd9e934, type: 2}
+  - {fileID: 2100000, guid: 5b8e306b8f1292a45b62cbb48b6d1467, type: 2}
+  - {fileID: 2100000, guid: d856bef9752f4b94792d16ec0dfbaa6b, type: 2}
+  - {fileID: 2100000, guid: 790aef9e41abc39439890f1d40bf092d, type: 2}
+  - {fileID: 2100000, guid: 4eeca5cdb9320684b91638f1ef652987, type: 2}
+  - {fileID: 2100000, guid: 4701823573dc63b47945001206c99c36, type: 2}
+  - {fileID: 2100000, guid: 1390211c9809f914885aed46ca9f638b, type: 2}
+  - {fileID: 2100000, guid: 4695bd902927e834c800f82e4cd6dbca, type: 2}
+  - {fileID: 2100000, guid: d538140f4435d554bb657ee6910ad9ef, type: 2}
+  - {fileID: 2100000, guid: 247fd6fe4b10e444fae354baca12fe76, type: 2}
+  - {fileID: 2100000, guid: 176ea36f9daf67c4cb27762e64b713bd, type: 2}
+  - {fileID: 2100000, guid: 781a3e9c987e0ca44a2f44f3fcfe174b, type: 2}
+  - {fileID: 2100000, guid: c9d71860ce2bd034b995e445a324944d, type: 2}
+  - {fileID: 2100000, guid: 3a2d8369995a465499c90c94fb8b6c4e, type: 2}
+  - {fileID: 2100000, guid: 7a10401e119458544b269a24e3893073, type: 2}
+  - {fileID: 2100000, guid: 0f142ca19d247964dbdb02184863dac4, type: 2}
+  - {fileID: 2100000, guid: 969ccceacfff9674590c23e0a52fb5ba, type: 2}
+  - {fileID: 2100000, guid: 76b27126339d3d041b24024587f42d55, type: 2}
   positionList: []
   rotationList: []
   scaleList: []
-  batch_Tex_IDs: []
+  batch_Tex_IDs:
+  - tex_main: 0
+    tex_normal_map: 0
+    tex_metalic_map: 0
+    tex_specular_map: -1
+    tex_detail_map: 0
+    tex_detail_normal_map: 0
+    tex_occulussion_map: 0
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 2
+    tex_normal_map: 1
+    tex_metalic_map: 1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 3
+    tex_normal_map: 2
+    tex_metalic_map: 2
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 4
+    tex_normal_map: 3
+    tex_metalic_map: 3
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 5
+    tex_normal_map: -1
+    tex_metalic_map: 4
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 6
+    tex_normal_map: 4
+    tex_metalic_map: 5
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 7
+    tex_normal_map: -1
+    tex_metalic_map: 6
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 8
+    tex_normal_map: 5
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 9
+    tex_normal_map: -1
+    tex_metalic_map: 7
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 10
+    tex_normal_map: 6
+    tex_metalic_map: 8
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 11
+    tex_normal_map: 7
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 12
+    tex_normal_map: 8
+    tex_metalic_map: 9
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: 1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 13
+    tex_normal_map: -1
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 14
+    tex_normal_map: 9
+    tex_metalic_map: -1
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: -1
+    tex_normal_map: -1
+    tex_metalic_map: 10
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
+  - tex_main: 15
+    tex_normal_map: 10
+    tex_metalic_map: 11
+    tex_specular_map: -1
+    tex_detail_map: -1
+    tex_detail_normal_map: -1
+    tex_occulussion_map: -1
+    tex_detail_mask_map: -1
+    tex_emission_map: -1
   batch_IDs0: []
   m_BaseMaps: []
   m_BumpMaps: []

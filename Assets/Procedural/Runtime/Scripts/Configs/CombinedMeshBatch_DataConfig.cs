@@ -61,12 +61,13 @@ namespace PRK.Procedural
         {
             var renderers = parent_.GetComponentsInChildren<MeshRenderer>();
             Dictionary<Mesh, int> mehs_Idict=new Dictionary<Mesh, int>();
+            HashSet<Material>materialsTemp=new HashSet<Material>();
             Dictionary<TexNames,List<Texture2D>>texture_Dict=new Dictionary<TexNames, List<Texture2D>>();
             batch_Tex_IDs=new List<Batch_Tex_IDs>();
             texture_Dict.Add(TexNames._BaseMap, new List<Texture2D>());
             texture_Dict.Add(TexNames._BumpMap, new List<Texture2D>());
-            texture_Dict.Add(TexNames._MetallicGloassMap, new List<Texture2D>());
-            texture_Dict.Add(TexNames._SpecGloassMap, new List<Texture2D>());
+            texture_Dict.Add(TexNames._MetallicGlossMap, new List<Texture2D>());
+            texture_Dict.Add(TexNames._SpecGlossMap, new List<Texture2D>());
             texture_Dict.Add(TexNames._DetailAlbedoMap, new List<Texture2D>());
             texture_Dict.Add(TexNames._DetailMask, new List<Texture2D>());
             texture_Dict.Add(TexNames._DetailNormalMap, new List<Texture2D>());
@@ -85,9 +86,16 @@ namespace PRK.Procedural
                     {
                         if (x.sharedMaterials.Length == 1)
                         {
-                            int mid = mehs_Idict.AddToDictionary(filter.sharedMesh);
-                            Batch_Tex_IDs b1=new Batch_Tex_IDs(texture_Dict,x.sharedMaterials[0]);
-                            batch_Tex_IDs.Add(b1);
+                            if (x.sharedMaterials[0].shader.name == "Universal Render Pipeline/Lit")
+                            {
+                                int mid = mehs_Idict.AddToDictionary(filter.sharedMesh);
+                                if (!materialsTemp.Contains(x.sharedMaterials[0]))
+                                {
+                                    Batch_Tex_IDs b1=new Batch_Tex_IDs(texture_Dict,x.sharedMaterials[0]);
+                                    batch_Tex_IDs.Add(b1);
+                                    materialsTemp.Add(x.sharedMaterials[0]);
+                                }
+                            }
                         }
                         else if (x.sharedMaterials.Length == 0||x.sharedMaterials.Length > 1)
                         {
@@ -96,7 +104,8 @@ namespace PRK.Procedural
                     }
                 }
             }
-            
+
+            material_list = new List<Material>(materialsTemp);
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssetIfDirty(this);
         }
@@ -112,8 +121,8 @@ namespace PRK.Procedural
         {
             SetTex_ID(TexNames._BaseMap,dict_,ref tex_main,material_);
             SetTex_ID(TexNames._BumpMap,dict_,ref tex_normal_map,material_);
-            SetTex_ID(TexNames._MetallicGloassMap,dict_,ref tex_metalic_map,material_);
-            SetTex_ID(TexNames._SpecGloassMap,dict_,ref tex_specular_map,material_);
+            SetTex_ID(TexNames._MetallicGlossMap,dict_,ref tex_metalic_map,material_);
+            SetTex_ID(TexNames._SpecGlossMap,dict_,ref tex_specular_map,material_);
             SetTex_ID(TexNames._DetailAlbedoMap,dict_,ref tex_detail_map,material_);
             SetTex_ID(TexNames._DetailMask,dict_,ref tex_detail_mask_map,material_);
             SetTex_ID(TexNames._DetailNormalMap,dict_,ref tex_detail_normal_map,material_);

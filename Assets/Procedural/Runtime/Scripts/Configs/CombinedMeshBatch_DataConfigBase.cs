@@ -74,8 +74,8 @@ namespace PRK.Procedural
     {
         _BaseMap,
         _BumpMap,
-        _MetallicGloassMap,
-        _SpecGloassMap,
+        _MetallicGlossMap,
+        _SpecGlossMap,
         _DetailAlbedoMap,
         _DetailMask,
         _DetailNormalMap,
