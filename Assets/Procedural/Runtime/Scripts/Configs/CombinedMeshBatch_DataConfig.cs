@@ -5,6 +5,7 @@ using UnityEngine;
 namespace PRK.Procedural
 {
     #if UNITY_EDITOR
+using System.Linq;
     using System.IO;
     using UnityEditor;
 
@@ -37,6 +38,74 @@ namespace PRK.Procedural
     public partial class CombinedMeshBatch_DataConfig
     {
         private const string localFolderPath = "Assets/Experimental/CombinedMeshData";
+
+        [MenuItem("CONTEXT/Transform/Split Submeshes")]
+        public static void SplitSubmeshes(MenuCommand menuCommand)
+        {
+            Transform selected=menuCommand.context as Transform;
+            if (selected == null) return;
+
+            var meshFilter = selected.GetComponent<MeshFilter>();
+            if (meshFilter == null) return;
+
+            var mesh = meshFilter.sharedMesh;
+            if (mesh == null) return;
+
+            var path = "Assets/SplitMeshes";
+            if (!AssetDatabase.IsValidFolder(path))
+                AssetDatabase.CreateFolder("Assets", "SplitMeshes");
+
+            var worldMatrix = selected.localToWorldMatrix;
+            var vertices = mesh.vertices;
+            var normals = mesh.normals;
+
+            Vector3[] worldVertices = new Vector3[vertices.Length];
+            Vector3[] worldNormals = new Vector3[normals.Length];
+
+            for (int i = 0; i < vertices.Length; i++)
+                worldVertices[i] = worldMatrix.MultiplyPoint3x4(vertices[i]);
+
+            for (int i = 0; i < normals.Length; i++)
+                worldNormals[i] = worldMatrix.MultiplyVector(normals[i]);
+
+            for (int i = 0; i < mesh.subMeshCount; i++)
+            {
+                var indices = mesh.GetTriangles(i);
+                var newMesh = new Mesh();
+                newMesh.vertices = worldVertices;
+                newMesh.normals = worldNormals;
+                newMesh.uv = mesh.uv;
+                newMesh.tangents = mesh.tangents;
+                newMesh.triangles = indices;
+
+                var meshName = $"{selected.name}_Submesh_{i}.asset";
+                AssetDatabase.CreateAsset(newMesh, $"{path}/{meshName}");
+            }
+
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+        }
+        [MenuItem("CONTEXT/Transform/Select/ Multiple Material meshes")]
+        public static void SelectMutliMaterialMeshes(MenuCommand menuCommand)
+        {
+            Transform t=menuCommand.context as Transform;
+            var meshes = t.gameObject.GetComponentsInChildren<MeshRenderer>();
+            HashSet<GameObject>group = new HashSet<GameObject>();
+            foreach (var x in meshes)
+            {
+                if (x.sharedMaterials.Length > 1)
+                {
+                    if (!group.Contains(x.gameObject))
+                    {
+                        group.Add(x.gameObject);
+                        Debug.Log($"{x.sharedMaterials.Length}",x);
+                    }
+                }
+            }
+
+          
+            Selection.objects = group.ToArray();
+        }
         [MenuItem("CONTEXT/Transform/Procedural/Create CombinedMeshBatch DataConfig from Children")]
         public static void CollectMeshDataFromChildren(MenuCommand menuCommand)
         {
