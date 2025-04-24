@@ -9,6 +9,89 @@ using System.Linq;
     using System.IO;
     using UnityEditor;
 
+    public class CopyTrs
+    {
+        public Transform trsCopy;
+        public Vector3 Position;
+        public Quaternion Rotation;
+        public Vector3 Scale;
+        public Matrix4x4 worldMatrix;
+        public Vector3[]vertices;
+        public Vector3[] normals;
+        public Vector3[]worldVertices;
+        public Vector3[] worldNormals;
+        private Mesh mesh;
+        public CopyTrs(Transform source_,MeshFilter meshFilter,Transform root_)
+        {
+            Position = source_.position;
+            Rotation = source_.rotation;
+            Scale = source_.lossyScale;
+            GameObject g = GameObject.Instantiate(source_.gameObject) as GameObject;
+            g.name = $"Copy_Of_{source_.name}";
+            if (meshFilter.sharedMesh.subMeshCount > 1)
+            {
+                g.transform.position = Vector3.zero;
+                g.transform.rotation = Quaternion.identity;
+                g.transform.localScale = Vector3.one;
+                trsCopy = g.transform;
+                mesh = Mesh.Instantiate(meshFilter.sharedMesh);
+                mesh.name=meshFilter.sharedMesh.name;
+                var meshRenderer = trsCopy.GetComponent<MeshRenderer>();
+                var sharedMaterials = meshRenderer != null ? meshRenderer.sharedMaterials : null;
+            
+                worldMatrix = trsCopy.localToWorldMatrix;
+                vertices = mesh.vertices;
+                normals = mesh.normals;
+
+                worldVertices = vertices.Select(v => worldMatrix.MultiplyPoint3x4(v)).ToArray();
+                worldNormals = normals.Length == vertices.Length
+                    ? normals.Select(n => worldMatrix.MultiplyVector(n)).ToArray()
+                    : null;
+                for (int i = 0; i < mesh.subMeshCount; i++)
+                {
+                    GameObject gg = Split(sharedMaterials, i);
+                    gg.transform.SetParent(root_,true);
+                    gg.name = $"{i}__Copy_Off_{source_.name}";
+                }
+                Object.DestroyImmediate(g);
+            }
+            else if (meshFilter.sharedMesh.subMeshCount == 1)
+            {
+                g.transform.position = Position;
+                g.transform.rotation = Rotation;
+                g.transform.localScale = Scale;
+                g.transform.SetParent(root_,true);
+            }
+        }
+
+        private GameObject Split(Material[]sharedMaterials,int i)
+        {
+            var indices = mesh.GetTriangles(i);
+            var newMesh = new Mesh
+            {
+                vertices = worldVertices,
+                triangles = indices,
+                uv = mesh.uv
+            };
+            string meshName = $"SplitMesh_[{i}]_{mesh.name}";
+            var go = new GameObject(meshName);
+            go.transform.position = Vector3.zero;
+            go.transform.rotation = Quaternion.identity;
+            go.transform.localScale = Vector3.one;
+            var mf = go.AddComponent<MeshFilter>();
+            var mr = go.AddComponent<MeshRenderer>();
+            mf.mesh = newMesh;
+            if (sharedMaterials != null && i < sharedMaterials.Length)
+                mr.sharedMaterial = sharedMaterials[i];
+            go.transform.position=Position;
+            go.transform.rotation = Rotation;
+            go.transform.localScale = Scale;
+            return go;
+        }
+    }
+
+    
+
     public static class Extensions
     {
         public static Vector4 GetScaleOffset(this Material mat_,string Name_ )
@@ -38,53 +121,32 @@ using System.Linq;
     public partial class CombinedMeshBatch_DataConfig
     {
         private const string localFolderPath = "Assets/Experimental/CombinedMeshData";
-
+      
         [MenuItem("CONTEXT/Transform/Split Submeshes")]
         public static void SplitSubmeshes(MenuCommand menuCommand)
         {
             Transform selected=menuCommand.context as Transform;
-            if (selected == null) return;
-
-            var meshFilter = selected.GetComponent<MeshFilter>();
-            if (meshFilter == null) return;
-
-            var mesh = meshFilter.sharedMesh;
-            if (mesh == null) return;
-
-            var path = "Assets/SplitMeshes";
-            if (!AssetDatabase.IsValidFolder(path))
-                AssetDatabase.CreateFolder("Assets", "SplitMeshes");
-
-            var worldMatrix = selected.localToWorldMatrix;
-            var vertices = mesh.vertices;
-            var normals = mesh.normals;
-
-            Vector3[] worldVertices = new Vector3[vertices.Length];
-            Vector3[] worldNormals = new Vector3[normals.Length];
-
-            for (int i = 0; i < vertices.Length; i++)
-                worldVertices[i] = worldMatrix.MultiplyPoint3x4(vertices[i]);
-
-            for (int i = 0; i < normals.Length; i++)
-                worldNormals[i] = worldMatrix.MultiplyVector(normals[i]);
-
-            for (int i = 0; i < mesh.subMeshCount; i++)
+            var renders = selected.GetComponentsInChildren<MeshRenderer>();
+            GameObject splitObjectsParent=new GameObject("SplitObjectsParent");
+            splitObjectsParent.transform.position=Vector3.zero;
+            splitObjectsParent.transform.rotation=Quaternion.identity;
+            splitObjectsParent.transform.localScale=Vector3.one;
+            foreach (var x in renders)
             {
-                var indices = mesh.GetTriangles(i);
-                var newMesh = new Mesh();
-                newMesh.vertices = worldVertices;
-                newMesh.normals = worldNormals;
-                newMesh.uv = mesh.uv;
-                newMesh.tangents = mesh.tangents;
-                newMesh.triangles = indices;
-
-                var meshName = $"{selected.name}_Submesh_{i}.asset";
-                AssetDatabase.CreateAsset(newMesh, $"{path}/{meshName}");
+                if (x.TryGetComponent(out MeshFilter filter))
+                {
+                    if (filter.sharedMesh != null)
+                    {
+                        CopyTrs trsCopy = new CopyTrs(x.transform, filter,splitObjectsParent.transform);
+                    }
+                }
             }
-
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
         }
+
+       
+        
+     
+        
         [MenuItem("CONTEXT/Transform/Select/ Multiple Material meshes")]
         public static void SelectMutliMaterialMeshes(MenuCommand menuCommand)
         {
