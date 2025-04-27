@@ -239,8 +239,11 @@ namespace PRK.Procedural
             List<Mesh>newMeshes=new List<Mesh>();
             foreach (var x in mesh_submeshes)
             {
-                
+                CopyTrs cpy = new CopyTrs(x.Value.GetComponent<MeshFilter>(),out var tmparr);
+                newMeshes.AddRange(tmparr);
             }
+            var t=selected_tr.gameObject.AddComponent<TestData>();
+            t.submeshes=newMeshes.ToArray();
             /*var renders = selected.GetComponentsInChildren<MeshRenderer>();
             GameObject splitObjectsParent=new GameObject("SplitObjectsParent");
             splitObjectsParent.transform.position=Vector3.zero;
