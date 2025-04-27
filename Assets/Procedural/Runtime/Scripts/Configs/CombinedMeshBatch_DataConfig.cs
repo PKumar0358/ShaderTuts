@@ -36,34 +36,34 @@ using System.Linq;
                 g.transform.rotation = Quaternion.identity;
                 g.transform.localScale = Vector3.one;
                 trsCopy = g.transform;
+           
                 
-                if (_MeshBatchDictionary.TryGetSubmeshes(meshFilter.sharedMesh, out Mesh[] submeshes_))
-                {
-                    
-                }
-                else
-                {
-                    mesh.name=meshFilter.sharedMesh.name;
-                    var meshRenderer = trsCopy.GetComponent<MeshRenderer>();
-                    var sharedMaterials = meshRenderer != null ? meshRenderer.sharedMaterials : null;
+                mesh.name=meshFilter.sharedMesh.name;
+                var meshRenderer = trsCopy.GetComponent<MeshRenderer>();
+                var sharedMaterials = meshRenderer != null ? meshRenderer.sharedMaterials : null;
             
-                    worldMatrix = trsCopy.localToWorldMatrix;
-                    vertices = mesh.vertices;
-                    normals = mesh.normals;
-                    worldVertices = vertices.Select(v => worldMatrix.MultiplyPoint3x4(v)).ToArray();
-                    worldNormals = normals.Length == vertices.Length
-                        ? normals.Select(n => worldMatrix.MultiplyVector(n)).ToArray()
-                        : null;
+                worldMatrix = trsCopy.localToWorldMatrix;
+                vertices = mesh.vertices;
+                normals = mesh.normals;
+                worldVertices = vertices.Select(v => worldMatrix.MultiplyPoint3x4(v)).ToArray();
+                worldNormals = normals.Length == vertices.Length
+                    ? normals.Select(n => worldMatrix.MultiplyVector(n)).ToArray()
+                    : null;
                     
-                    Mesh[] new_submeshes = new Mesh[submeshes_.Length];
-                    for (int i = 0; i < mesh.subMeshCount; i++)
-                    {
-                        new_submeshes[i] = Split(i);
-                        GameObject gg=GameObjectForNewSubmesh(new_submeshes[i],sharedMaterials,i);
-                        gg.transform.SetParent(root_,true);
-                    }
-                    Object.DestroyImmediate(g);
+                Mesh[] new_submeshes = new Mesh[meshFilter.sharedMesh.subMeshCount];
+                for (int i = 0; i < mesh.subMeshCount; i++)
+                {
+                    new_submeshes[i] = Split(i);
+                    new_submeshes[i].name = $"{i}__Of_{meshFilter.sharedMesh.name}";
+                    GameObject gg=GameObjectForNewSubmesh(new_submeshes[i],sharedMaterials,i);
+                    gg.transform.SetParent(root_,true);
                 }
+                if (!_MeshBatchDictionary.TryGetSubmeshes(meshFilter.sharedMesh, out Mesh[] submeshes_))
+                {
+                    _MeshBatchDictionary.AddNewSubmeshes(meshFilter.sharedMesh, new_submeshes);
+                    _MeshBatchDictionary.PrintSubmeshIds(meshFilter.sharedMesh);
+                }
+                Object.DestroyImmediate(g);
                 
             }
             else if (meshFilter.sharedMesh.subMeshCount == 1)
@@ -73,6 +73,11 @@ using System.Linq;
                 g.transform.localScale = Scale;
                 g.transform.SetParent(root_,true);
                 g.GetComponent<MeshFilter>().mesh = mesh;
+                if (!_MeshBatchDictionary.TryGetSubmeshes(meshFilter.sharedMesh, out Mesh[] submeshes_))
+                {
+                    _MeshBatchDictionary.Add(meshFilter.sharedMesh, mesh,0);
+                    _MeshBatchDictionary.PrintSubmeshIds(meshFilter.sharedMesh);
+                }
             }
         }
 
@@ -85,6 +90,7 @@ using System.Linq;
                 triangles = indices,
                 uv = mesh.uv
             };
+           // newMesh.name=
             return newMesh;
         }
 
@@ -160,6 +166,9 @@ using System.Linq;
                     }
                 }
             }
+
+            var t=splitObjectsParent.AddComponent<TestData>();
+            _MeshBatchDictionary.FillSubmeshes(out t.meshes,out t.submeshes);
         }
 
        
@@ -291,7 +300,7 @@ using System.Linq;
         }
     }
     #endif
-    
+
     [CreateAssetMenu]
     public partial class CombinedMeshBatch_DataConfig : CombinedMeshBatch_DataConfigBase
     {
