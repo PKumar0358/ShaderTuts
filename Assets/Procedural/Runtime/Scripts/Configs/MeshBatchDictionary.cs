@@ -8,7 +8,7 @@ namespace PRK.Procedural
     public class MeshBatchDictionary
     {
         private List<Mesh> mesh_Keys;
-        private Dictionary<Mesh, Mesh[]> mesh_submesh_Map;
+        public Dictionary<Mesh, Mesh[]> mesh_submesh_Map;
         
         /// <summary>
         /// this will keep track the sum of previous element's count, and self count
@@ -20,6 +20,11 @@ namespace PRK.Procedural
             mesh_Keys = new List<Mesh>();
             mesh_submesh_Map = new Dictionary<Mesh, Mesh[]>();
             mesh_idCounter = new List<int[]>();
+        }
+
+        public bool HasMesh(Mesh meshKey_)
+        {
+            return mesh_submesh_Map.ContainsKey(meshKey_);
         }
 
         public void Add(Mesh source_mesh_,Mesh submesh_,int submesh_index)
@@ -71,7 +76,7 @@ namespace PRK.Procedural
             sourceContainer_ = mesh_submesh_Map.Keys.ToArray();
             List<Mesh>submeshes_ = new List<Mesh>();
             int c=mesh_Keys.Count;
-            Debug.Log($"{c}   == {mesh_submesh_Map.Count}");
+          //  Debug.Log($"{c}   == {mesh_submesh_Map.Count}");
             for (int i = 0; i < c; i++)
             {
                 var arr= mesh_submesh_Map[mesh_Keys[i]];
@@ -79,7 +84,7 @@ namespace PRK.Procedural
                 for (int k = 0; k < arr.Length; k++)
                 {
                     int id=start_i+k;
-                    Debug.Log($"---- {id} ");
+                  //  Debug.Log($"---- {id} ");
                     submeshes_.Add(arr[k]);
                 }
             }

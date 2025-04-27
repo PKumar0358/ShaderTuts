@@ -5,7 +5,7 @@ using UnityEngine;
 namespace PRK.Procedural
 {
     #if UNITY_EDITOR
-using System.Linq;
+    using System.Linq;
     using System.IO;
     using UnityEditor;
 
@@ -21,16 +21,51 @@ using System.Linq;
         public Vector3[]worldVertices;
         public Vector3[] worldNormals;
         private Mesh mesh;
-        public CopyTrs(Transform source_,MeshFilter meshFilter,Transform root_,MeshBatchDictionary _MeshBatchDictionary)
+
+        public CopyTrs(MeshFilter sourceFilter_,out Mesh[] split_MeshArray_)
+        {
+            Transform source_ = sourceFilter_.transform;
+            Position = source_.position;
+            Rotation = source_.rotation;
+            Scale = source_.lossyScale;
+            
+            mesh = Mesh.Instantiate(sourceFilter_.sharedMesh);
+            mesh.name=sourceFilter_.sharedMesh.name;
+            
+            GameObject g = GameObject.Instantiate(source_.gameObject) as GameObject;
+            g.name = $"Copy_Of_{source_.name}";
+            g.transform.ResetTransform();
+            trsCopy= g.transform;
+            
+            worldMatrix = trsCopy.localToWorldMatrix;
+            vertices = mesh.vertices;
+            normals = mesh.normals;
+            worldVertices = vertices.Select(v => worldMatrix.MultiplyPoint3x4(v)).ToArray();
+            worldNormals = normals.Length == vertices.Length
+                ? normals.Select(n => worldMatrix.MultiplyVector(n)).ToArray()
+                : null;
+            split_MeshArray_ = new Mesh[sourceFilter_.sharedMesh.subMeshCount];
+            for (int i = 0; i < mesh.subMeshCount; i++)
+            {
+                split_MeshArray_[i] = Split(i);
+                split_MeshArray_[i].name = $"Submesh_{i}__Of__{sourceFilter_.sharedMesh.name}";
+            }
+            Object.DestroyImmediate(g);
+            Object.DestroyImmediate(mesh);
+            
+        }
+        
+        public CopyTrs(Transform source_,MeshFilter sourceFilter_,Transform root_)
         {
             Position = source_.position;
             Rotation = source_.rotation;
             Scale = source_.lossyScale;
             GameObject g = GameObject.Instantiate(source_.gameObject) as GameObject;
-            mesh = Mesh.Instantiate(meshFilter.sharedMesh);
             g.name = $"Copy_Of_{source_.name}";
             
-            if (meshFilter.sharedMesh.subMeshCount > 1)
+            mesh = Mesh.Instantiate(sourceFilter_.sharedMesh);
+            
+            if (sourceFilter_.sharedMesh.subMeshCount > 1)
             {
                 g.transform.position = Vector3.zero;
                 g.transform.rotation = Quaternion.identity;
@@ -38,7 +73,8 @@ using System.Linq;
                 trsCopy = g.transform;
            
                 
-                mesh.name=meshFilter.sharedMesh.name;
+                mesh.name=sourceFilter_.sharedMesh.name;
+                
                 var meshRenderer = trsCopy.GetComponent<MeshRenderer>();
                 var sharedMaterials = meshRenderer != null ? meshRenderer.sharedMaterials : null;
             
@@ -50,34 +86,25 @@ using System.Linq;
                     ? normals.Select(n => worldMatrix.MultiplyVector(n)).ToArray()
                     : null;
                     
-                Mesh[] new_submeshes = new Mesh[meshFilter.sharedMesh.subMeshCount];
+                Mesh[] new_submeshes = new Mesh[sourceFilter_.sharedMesh.subMeshCount];
                 for (int i = 0; i < mesh.subMeshCount; i++)
                 {
                     new_submeshes[i] = Split(i);
-                    new_submeshes[i].name = $"{i}__Of_{meshFilter.sharedMesh.name}";
+                    new_submeshes[i].name = $"{i}__Of_{sourceFilter_.sharedMesh.name}";
                     GameObject gg=GameObjectForNewSubmesh(new_submeshes[i],sharedMaterials,i);
                     gg.transform.SetParent(root_,true);
                 }
-                if (!_MeshBatchDictionary.TryGetSubmeshes(meshFilter.sharedMesh, out Mesh[] submeshes_))
-                {
-                    _MeshBatchDictionary.AddNewSubmeshes(meshFilter.sharedMesh, new_submeshes);
-                    _MeshBatchDictionary.PrintSubmeshIds(meshFilter.sharedMesh);
-                }
+              
                 Object.DestroyImmediate(g);
                 
             }
-            else if (meshFilter.sharedMesh.subMeshCount == 1)
+            else if (sourceFilter_.sharedMesh.subMeshCount == 1)
             {
                 g.transform.position = Position;
                 g.transform.rotation = Rotation;
                 g.transform.localScale = Scale;
                 g.transform.SetParent(root_,true);
                 g.GetComponent<MeshFilter>().mesh = mesh;
-                if (!_MeshBatchDictionary.TryGetSubmeshes(meshFilter.sharedMesh, out Mesh[] submeshes_))
-                {
-                    _MeshBatchDictionary.Add(meshFilter.sharedMesh, mesh,0);
-                    _MeshBatchDictionary.PrintSubmeshIds(meshFilter.sharedMesh);
-                }
             }
         }
 
@@ -90,7 +117,9 @@ using System.Linq;
                 triangles = indices,
                 uv = mesh.uv
             };
-           // newMesh.name=
+            if (worldNormals != null) newMesh.normals = worldNormals;
+            if (mesh.tangents != null && mesh.tangents.Length == mesh.vertexCount)
+                newMesh.tangents = mesh.tangents;
             return newMesh;
         }
 
@@ -111,12 +140,32 @@ using System.Linq;
             go.transform.localScale = Scale;
             return go;
         }
+
+        public GameObject NewGameObject(string gameName_ = "New GameObject")
+        {
+            var go = new GameObject(gameName_);
+            go.transform.position = Vector3.zero;
+            go.transform.rotation = Quaternion.identity;
+            go.transform.localScale = Vector3.one;
+            return go;
+        }
     }
 
     
 
     public static class Extensions
     {
+        public static void ResetTransform(this Transform trs)
+        {
+            Transform parent_= trs.parent;
+            if (parent_ != null)
+                trs.parent = null;
+            trs.position = Vector3.zero;
+            trs.rotation = Quaternion.identity;
+            trs.localScale = Vector3.one;
+            if(trs.parent != null)
+                trs.SetParent(parent_,true);
+        }
         public static Vector4 GetScaleOffset(this Material mat_,string Name_ )
         {
             Vector4 scaleoffset = new Vector4(1, 1, 0, 0);
@@ -127,6 +176,42 @@ using System.Linq;
             scaleoffset.z = v.x;
             scaleoffset.w = v.y;
             return scaleoffset;
+        }
+
+        public static void GetMeshSubmeshes(this Transform parent_,out Dictionary<Mesh,Transform>all_meshes,out Dictionary<Mesh,int[]>mesh_submesh_ids)
+        {
+            all_meshes=new Dictionary<Mesh,Transform>();
+            var renderers=parent_.GetComponentsInChildren<Renderer>();
+            foreach (var x in renderers)
+            {
+                if (x.TryGetComponent(out MeshFilter mf))
+                {
+                    if (mf.sharedMesh != null)
+                    {
+                        if(!all_meshes.ContainsKey(mf.sharedMesh))
+                            all_meshes.Add(mf.sharedMesh,x.transform);
+                        else
+                            continue;
+                    }
+                }
+            }
+            mesh_submesh_ids=new Dictionary<Mesh,int[]>();//
+            int submeshID_ = 0;
+            foreach (var x in all_meshes)
+            {
+                int[] ids = new int[x.Key.subMeshCount];
+                for (int i = 0; i < x.Key.subMeshCount; i++)
+                {
+                    ids[i] = submeshID_;
+                    submeshID_++;
+                }
+                mesh_submesh_ids.Add(x.Key,ids);
+            }
+        }
+
+        public static void New_SplitSubmehes(this Mesh mesh_,out Mesh[]splitArray_)
+        {
+            splitArray_ = new Mesh[mesh_.subMeshCount];
         }
         public  static int AddToDictionary<T>(this Dictionary<T, int> dict, T ke)
         {
@@ -148,27 +233,33 @@ using System.Linq;
         [MenuItem("CONTEXT/Transform/Split Submeshes")]
         public static void SplitSubmeshes(MenuCommand menuCommand)
         {
-            MeshBatchDictionary _MeshBatchDictionary = new MeshBatchDictionary();
-            Transform selected=menuCommand.context as Transform;
-            var renders = selected.GetComponentsInChildren<MeshRenderer>();
+         //   MeshBatchDictionary _MeshBatchDictionary = new MeshBatchDictionary();
+            Transform selected_tr=menuCommand.context as Transform;
+            selected_tr.GetMeshSubmeshes(out var mesh_submeshes,out var mesh_submesh_ids);
+            List<Mesh>newMeshes=new List<Mesh>();
+            foreach (var x in mesh_submeshes)
+            {
+                
+            }
+            /*var renders = selected.GetComponentsInChildren<MeshRenderer>();
             GameObject splitObjectsParent=new GameObject("SplitObjectsParent");
             splitObjectsParent.transform.position=Vector3.zero;
             splitObjectsParent.transform.rotation=Quaternion.identity;
             splitObjectsParent.transform.localScale=Vector3.one;
-           // Dictionary<Mesh,List<>>
+      
             foreach (var x in renders)
             {
                 if (x.TryGetComponent(out MeshFilter filter))
                 {
                     if (filter.sharedMesh != null)
                     {
-                        CopyTrs trsCopy = new CopyTrs(x.transform, filter,splitObjectsParent.transform,_MeshBatchDictionary);
+                        CopyTrs trsCopy = new CopyTrs(x.transform, filter,splitObjectsParent.transform);
                     }
                 }
             }
 
             var t=splitObjectsParent.AddComponent<TestData>();
-            _MeshBatchDictionary.FillSubmeshes(out t.meshes,out t.submeshes);
+            _MeshBatchDictionary.FillSubmeshes(out t.meshes,out t.submeshes);*/
         }
 
        
