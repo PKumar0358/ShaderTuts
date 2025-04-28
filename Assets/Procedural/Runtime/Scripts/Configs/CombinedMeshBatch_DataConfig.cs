@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace PRK.Procedural
 {
@@ -155,6 +157,14 @@ namespace PRK.Procedural
 
     public static class Extensions
     {
+        public static GameObject GetNewGameObject(this Transform t, string gameName_ = "New GameObject")
+        {
+            var go = new GameObject(gameName_);
+            go.transform.position = t.position;
+            go.transform.rotation = t.rotation;
+            go.transform.localScale = t.lossyScale;
+            return go;
+        }
         public static void ResetTransform(this Transform trs)
         {
             Transform parent_= trs.parent;
@@ -178,10 +188,23 @@ namespace PRK.Procedural
             return scaleoffset;
         }
 
-        public static void GetMeshSubmeshes(this Transform parent_,out Dictionary<Mesh,Transform>all_meshes,out Dictionary<Mesh,int[]>mesh_submesh_ids)
+
+        public static void ModiyMeshUVsBasedOnId(this List<Mesh>sourceArray_,int index_)
+        {
+            Mesh ms=sourceArray_[index_];
+            List<Vector3>newUVs = new List<Vector3>();
+            for (int i = 0; i < ms.uv.Length; i++)
+            {
+                Vector3 v = new Vector3(ms.uv[i].x,ms.uv[i].y,index_);
+                newUVs.Add(v);
+            }
+            ms.SetUVs(0,newUVs);
+            sourceArray_[index_] = ms;
+        }
+        public static void GetMeshSubmeshes(this Transform parent_,out Renderer[]renderers,out Dictionary<Mesh,Transform>all_meshes,out Dictionary<Mesh,int[]>mesh_submesh_ids)
         {
             all_meshes=new Dictionary<Mesh,Transform>();
-            var renderers=parent_.GetComponentsInChildren<Renderer>();
+            renderers=parent_.GetComponentsInChildren<Renderer>();
             foreach (var x in renderers)
             {
                 if (x.TryGetComponent(out MeshFilter mf))
@@ -233,23 +256,62 @@ namespace PRK.Procedural
         [MenuItem("CONTEXT/Transform/Split Submeshes")]
         public static void SplitSubmeshes(MenuCommand menuCommand)
         {
+            GameObject splitObjectsParent=new GameObject("SplitObjectsParent");
+            splitObjectsParent.transform.position=Vector3.zero;
+            splitObjectsParent.transform.rotation=Quaternion.identity;
+            splitObjectsParent.transform.localScale=Vector3.one;
          //   MeshBatchDictionary _MeshBatchDictionary = new MeshBatchDictionary();
             Transform selected_tr=menuCommand.context as Transform;
-            selected_tr.GetMeshSubmeshes(out var mesh_submeshes,out var mesh_submesh_ids);
+            selected_tr.GetMeshSubmeshes(out var renderers_,out var mesh_submeshes,out var mesh_submesh_ids);
             List<Mesh>newMeshes=new List<Mesh>();
             foreach (var x in mesh_submeshes)
             {
                 CopyTrs cpy = new CopyTrs(x.Value.GetComponent<MeshFilter>(),out var tmparr);
                 newMeshes.AddRange(tmparr);
             }
+
+            for (int i = 0; i < newMeshes.Count; i++)
+            {
+                newMeshes.ModiyMeshUVsBasedOnId(i);
+            }
+            
             var t=selected_tr.gameObject.AddComponent<TestData>();
             t.submeshes=newMeshes.ToArray();
+            CombineInstance[] cmb =new CombineInstance[renderers_.Length];
+            int ii = 0;
+            foreach (var x in renderers_)
+            {
+                if (x.TryGetComponent(out MeshFilter mf))
+                {
+                    if (mf.sharedMesh != null)
+                    {
+                        int c=mf.sharedMesh.subMeshCount;
+                        for (int i = 0; i < c; i++)
+                        {
+                            int mesh_index=mesh_submesh_ids[mf.sharedMesh][i];
+                            cmb[ii].mesh=newMeshes[mesh_index];
+                            cmb[ii].transform = x.transform.localToWorldMatrix;
+                            ii++;
+                            /*GameObject g = x.transform.GetNewGameObject($"Copy_{x.name}");
+                            var mf2=g.AddComponent<MeshFilter>();
+                            var rndr=g.AddComponent<MeshRenderer>();
+                            mf2.mesh = newMeshes[mesh_index];
+                            rndr.material = x.sharedMaterials[i];
+                            g.transform.SetParent(splitObjectsParent.transform,true);*/
+                        }
+                    }
+                }
+            }
+            Mesh mesh = new Mesh();
+            mesh.CombineMeshes(cmb,true,true);
+            splitObjectsParent.AddComponent<MeshFilter>().mesh=mesh;
+            splitObjectsParent.AddComponent<MeshRenderer>();
             /*var renders = selected.GetComponentsInChildren<MeshRenderer>();
             GameObject splitObjectsParent=new GameObject("SplitObjectsParent");
             splitObjectsParent.transform.position=Vector3.zero;
             splitObjectsParent.transform.rotation=Quaternion.identity;
             splitObjectsParent.transform.localScale=Vector3.one;
-      
+
             foreach (var x in renders)
             {
                 if (x.TryGetComponent(out MeshFilter filter))
