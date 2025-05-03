@@ -277,7 +277,7 @@ namespace PRK.Procedural
             
             var t=selected_tr.gameObject.AddComponent<TestData>();
             t.submeshes=newMeshes.ToArray();
-            CombineInstance[] cmb =new CombineInstance[renderers_.Length];
+            List<CombineInstance> cmb = new List<CombineInstance>();
             int ii = 0;
             foreach (var x in renderers_)
             {
@@ -288,9 +288,11 @@ namespace PRK.Procedural
                         int c=mf.sharedMesh.subMeshCount;
                         for (int i = 0; i < c; i++)
                         {
+                            CombineInstance cmb1=new CombineInstance();
                             int mesh_index=mesh_submesh_ids[mf.sharedMesh][i];
-                            cmb[ii].mesh=newMeshes[mesh_index];
-                            cmb[ii].transform = x.transform.localToWorldMatrix;
+                            cmb1.mesh=newMeshes[mesh_index];
+                            cmb1.transform = x.transform.localToWorldMatrix;
+                            cmb.Add(cmb1);
                             ii++;
                             /*GameObject g = x.transform.GetNewGameObject($"Copy_{x.name}");
                             var mf2=g.AddComponent<MeshFilter>();
@@ -303,7 +305,8 @@ namespace PRK.Procedural
                 }
             }
             Mesh mesh = new Mesh();
-            mesh.CombineMeshes(cmb,true,true);
+            mesh.indexFormat=UnityEngine.Rendering.IndexFormat.UInt32;
+            mesh.CombineMeshes(cmb.ToArray(),true,true);
             splitObjectsParent.AddComponent<MeshFilter>().mesh=mesh;
             splitObjectsParent.AddComponent<MeshRenderer>();
             /*var renders = selected.GetComponentsInChildren<MeshRenderer>();

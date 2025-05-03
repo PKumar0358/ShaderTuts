@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e1b339396c7c4386affe60f59d55f, type: 3}
+  m_Name: New Texture Packer Config
+  m_EditorClassIdentifier: 
+  atlasSize: 2048
+  texturesToPack:
+  - {fileID: 2800000, guid: 440e935b4b06c7248907cc6476888526, type: 3}
+  - {fileID: 2800000, guid: 957c42db3e3769b46b5d47d7d911eab6, type: 3}
+  - {fileID: 2800000, guid: 947d2f8b002d964479658be1ede6c20c, type: 3}
+  atlas: {fileID: 2800000, guid: d3811f583edd6b540a2a52430d8bd413, type: 3}
+  packedRects:
+  - serializedVersion: 2
+    x: 0.7519531
+    y: 0
+    width: 0.1875
+    height: 0.1875
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.375
+    height: 0.375
+  - serializedVersion: 2
+    x: 0.37597656
+    y: 0
+    width: 0.375
+    height: 0.375
